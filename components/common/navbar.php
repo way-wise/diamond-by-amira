@@ -102,8 +102,8 @@
     </div>
     
     <!-- Static HTML Mega Menus - Easy to customize -->
-    <?php include __DIR__ . '/mega-menu/fine-jewelry.html'; ?>
-    <?php include __DIR__ . '/mega-menu/bridal.html'; ?>
+    <?php include __DIR__ . '/../mega-menu/fine-jewelry.html'; ?>
+    <?php include __DIR__ . '/../mega-menu/bridal.html'; ?>
 </nav>
 
 <script>

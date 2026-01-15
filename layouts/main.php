@@ -62,9 +62,9 @@ $showPageTitle = $showPageTitle ?? true;
 </head>
 
 <body class="min-h-screen flex flex-col bg-white font-sans">
-    <?php include __DIR__ . '/../components/topbar.php'; ?>
+    <?php include __DIR__ . '/../components/common/topbar.php'; ?>
 
-    <?php include __DIR__ . '/../components/navbar.php'; ?>
+    <?php include __DIR__ . '/../components/common/navbar.php'; ?>
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -84,7 +84,7 @@ $showPageTitle = $showPageTitle ?? true;
         ?>
     </main>
 
-    <?php include __DIR__ . '/../components/footer.php'; ?>
+    <?php include __DIR__ . '/../components/common/footer.php'; ?>
 
     </body>
 </html>
