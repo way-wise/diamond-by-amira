@@ -1,37 +1,20 @@
 <?php
-/**
- * Hero Section Component
- * Dark background with golden light streaks from top right
- * Left: Title and description
- * Right: Diamond Design Card with:
- * - "Design Your Own Diamond Jewellery" button at top
- * - 3 Steps indicator (1 Choose SETTING active)
- * - Diamond image
- * - Filters (Shape, Metal, Style)
- * - Price and Carat sliders
- * - View Diamond button
- */
-$heroTitle = $heroTitle ?? 'Buy Diamonds the Smarter Way';
-$heroDescription = $heroDescription ?? 'Discover certified diamonds, transparent pricing, expert guidance, and seamless online experiences designed to help you choose confidently, efficiently, and beautifully.';
-$diamondImage = $diamondImage ?? '/assets/images/diamond-hero.jpg';
 ?>
-<section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 lg:py-32 overflow-hidden">
+<section class="relative text-white py-20 lg:py-32 overflow-hidden mx-16">
     <!-- Background decorative elements - Golden light streaks from top right -->
-    <div class="absolute inset-0 opacity-30">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
-        <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-yellow-300 rounded-full blur-2xl"></div>
-        <div class="absolute top-0 right-0 w-48 h-96 bg-yellow-500 opacity-50 blur-xl"></div>
+    <div class="absolute inset-0 rounded-3xl overflow-hidden">
+        <img src="/assets/images/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
     </div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="r">
             <!-- Left side - Text Content -->
-            <div class="text-center lg:text-left">
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    <?php echo htmlspecialchars($heroTitle); ?>
+            <div class="text-center">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight ">
+                    Buy Diamonds the Smarter Way
                 </h1>
-                <p class="text-lg lg:text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                    <?php echo htmlspecialchars($heroDescription); ?>
+                <p class="text-lg lg:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-auto leading-relaxed">
+                    Discover certified diamonds, transparent pricing, expert guidance, and seamless online experiences designed to help you choose confidently, efficiently, and beautifully.
                 </p>
             </div>
             
