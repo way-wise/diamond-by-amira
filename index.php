@@ -171,81 +171,10 @@ $categories = [
     ['name' => 'Pendants', 'image' => '/assets/images/pendants.jpg', 'url' => '#']
 ];
 
-// Promotional banners configuration
-$banners = [
-    [
-        'title' => 'Hurry! Flat 40% Off Ends Tonight!',
-        'subtitle' => 'Grab Your Favorites Before The Clock Runs Out',
-        'buttonText' => 'Shop Now',
-        'buttonUrl' => '#',
-        'image' => '/assets/images/promo1.jpg',
-        'bgColor' => 'bg-white',
-        'textColor' => 'text-gray-900'
-    ],
-    [
-        'title' => 'Just Dropped Our New Collection!',
-        'subtitle' => 'Be The First To Ship Exclusive Designs',
-        'buttonText' => 'Explore Collection',
-        'buttonUrl' => '#',
-        'image' => '/assets/images/promo2.jpg',
-        'bgColor' => 'bg-gray-900',
-        'textColor' => 'text-white'
-    ]
-];
-
 // Most selling products configuration
 $sectionTitle = 'Most Selling Product';
 $sectionDescription = 'Discover our most popular diamond jewelry pieces.';
-$products = [
-    [
-        'name' => 'Celeste Brilliance Solitaire Ring',
-        'price' => 2499.00,
-        'originalPrice' => 2435.00,
-        'rating' => 5,
-        'image' => '/assets/images/product1.jpg',
-        'url' => '#'
-    ],
-    [
-        'name' => 'Celeste Brilliance Solitaire Ring',
-        'price' => 2499.00,
-        'originalPrice' => 2435.00,
-        'rating' => 5,
-        'image' => '/assets/images/product2.jpg',
-        'url' => '#'
-    ],
-    [
-        'name' => 'Celeste Brilliance Solitaire Ring',
-        'price' => 2499.00,
-        'originalPrice' => 2435.00,
-        'rating' => 5,
-        'image' => '/assets/images/product3.jpg',
-        'url' => '#'
-    ],
-    [
-        'name' => 'Celeste Brilliance Solitaire Ring',
-        'price' => 2499.00,
-        'originalPrice' => 2435.00,
-        'rating' => 5,
-        'image' => '/assets/images/product4.jpg',
-        'url' => '#'
-    ],
-    [
-        'name' => 'Celeste Brilliance Solitaire Ring',
-        'price' => 2499.00,
-        'originalPrice' => 2435.00,
-        'rating' => 5,
-        'image' => '/assets/images/product5.jpg',
-        'url' => '#'
-    ],
-    [
-        'name' => 'Celeste Brilliance Solitaire Ring',
-        'price' => 2499.00,
-        'originalPrice' => 2435.00,
-        'rating' => 5,
-        'image' => '/assets/images/product6.jpg',
-        'url' => '#'
-    ]
-];
+
 
 // Elegance banner configuration
 $bannerTitle = 'Redefining Elegance with Unique Charms';
@@ -308,7 +237,7 @@ ob_start();
 <?php include __DIR__ . '/components/promotional-banners.php'; ?>
 
 <!-- Most Selling Products -->
-<?php include __DIR__ . '/components/product-grid.php'; ?>
+<?php include __DIR__ . '/components/products-section.php'; ?>
 
 <!-- Redefining Elegance Banner -->
 <?php include __DIR__ . '/components/elegance-banner.php'; ?>

@@ -1,5 +1,5 @@
 <div class="bg-gray-800 text-white text-xs py-2.5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container-wrapper">
         <div class="flex justify-between items-center">
             <!-- Left side - Links -->
             <div class="flex items-center space-x-3">

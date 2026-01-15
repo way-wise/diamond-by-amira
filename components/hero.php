@@ -6,7 +6,7 @@
         <img src="/assets/images/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="container-wrapper relative z-10">
         <!-- Text Content -->
         <div class="text-center">
             <span class="inline-flex items-center justify-center gap-2 px-3 py-1.5 bg-white text-sm text-black rounded-full mb-6">

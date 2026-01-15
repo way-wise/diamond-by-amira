@@ -14,7 +14,7 @@ $ringCategories = $ringCategories ?? [
 $seeAllUrl = $seeAllUrl ?? '#';
 ?>
 <section class="py-16 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-[1252px] mx-auto">
         <div class="flex justify-between items-start mb-10">
             <div>
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">

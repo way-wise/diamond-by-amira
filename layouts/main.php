@@ -47,6 +47,17 @@ $showPageTitle = $showPageTitle ?? true;
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
                     },
+                    maxWidth: {
+                        'container': '1252px',
+                    },
+                },
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '1rem',
+                        sm: '1.5rem',
+                        lg: '2rem',
+                    },
                 },
             },
         }
@@ -70,7 +81,7 @@ $showPageTitle = $showPageTitle ?? true;
     <main class="flex-grow">
         <?php if ($showPageTitle && isset($pageTitle)): ?>
             <div class="bg-white shadow-sm border-b">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="max-w-[1252px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <h1 class="text-3xl font-bold text-gray-900"><?php echo htmlspecialchars($pageTitle); ?></h1>
                 </div>
             </div>

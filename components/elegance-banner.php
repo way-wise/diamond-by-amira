@@ -16,7 +16,7 @@ $buttonUrl = $buttonUrl ?? '#';
         <div class="absolute right-1/4 top-1/4 w-64 h-64 bg-indigo-400 rounded-full blur-2xl"></div>
     </div>
     
-    <div class="max-w-7xl mx-auto relative z-10">
+    <div class="max-w-[1252px] mx-auto relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left side - Text Content -->
             <div class="order-2 lg:order-1">
