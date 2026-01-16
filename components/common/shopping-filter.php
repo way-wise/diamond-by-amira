@@ -68,9 +68,14 @@
 <div class="p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl">
     <div class="grid grid-cols-12 gap-4">
         <div class="col-span-7">
-            <div>
-                <h2 class="text-2xl font-bold text-[#000000]">Shape: Round</h2>
-                <p class="text-sm text-[#000000]">More Shapes</p>
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="text-xl font-bold text-[#000000]">Shape</h2>
+                <button class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2">
+                    <span class="mr-2">More Shapes</span>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#737373" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
             <div class="grid grid-cols-6 gap-4 text-black">
                 <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
@@ -100,7 +105,82 @@
             </div>
         </div>
         <div class="col-span-5">
+            <!-- PRICE SLIDER -->
+            <div class="mb-5">
+                <h2 class="text-xl font-bold text-[#000000]">Price</h2>
+                <div class="wrapper">
+                    <div class="slider-track"></div>
+                    <input type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
+                    <input type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
 
+                </div>
+                <div class="flex justify-between gap-3 items-center mt-4">
+                    <span id="range1" class="text-black border border-[#D7D7D7] rounded-md px-4 py-2 flex-1">
+                        0
+                    </span>
+                    <span class="text-black">-</span>
+                    <span id="range2" class="text-black border border-[#D7D7D7] rounded-md px-4 py-2 flex-1">
+                        100
+                    </span>
+                </div>
+            </div>
+            <!-- CARAT SLIDER -->
+            <div class="mb-0">
+                <h2 class="text-xl font-bold text-[#000000]">Carat</h2>
+                <div class="flex flex-col gap-2">
+                    <div class="relative h-10 flex items-center">
+                        <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
+                        <div id="caratSliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                        <input id="caratMin" type="range" min="0.15" max="24" value="0.15" step="0.01"
+                            class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 2;" />
+                        <input id="caratMax" type="range" min="0.15" max="24" value="24" step="0.01"
+                            class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 1;" />
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="text" readonly id="caratMinInput" value="0.15" class="w-28 px-4 py-2 bg-[#F6F6F6] border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <span class="text-xl text-[#bbbbbb]">—</span>
+                        <input type="text" readonly id="caratMaxInput" value="24" class="w-28 px-4 py-2 bg-[#F6F6F6] border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                    </div>
+                </div>
+            </div>
+            <script>
+                window.onload = function() {
+                    slideOne();
+                    slideTwo();
+                };
+
+                let sliderOne = document.getElementById("slider-1");
+                let sliderTwo = document.getElementById("slider-2");
+                let displayValOne = document.getElementById("range1");
+                let displayValTwo = document.getElementById("range2");
+                let minGap = 0;
+                let sliderTrack = document.querySelector(".slider-track");
+                let sliderMaxValue = document.getElementById("slider-1").max;
+
+                function slideOne() {
+                    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+                        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+                    }
+                    displayValOne.textContent = sliderOne.value;
+                    fillColor();
+                }
+
+                function slideTwo() {
+                    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+                        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+                    }
+                    displayValTwo.textContent = sliderTwo.value;
+                    fillColor();
+                }
+
+                function fillColor() {
+                    percent1 = (sliderOne.value / sliderMaxValue) * 100;
+                    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+                    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #000 ${percent1}% , #000 ${percent2}%, #dadae5 ${percent2}%)`;
+                }
+            </script>
         </div>
         <div class="col-span-5">
 
