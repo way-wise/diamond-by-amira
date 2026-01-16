@@ -1,6 +1,6 @@
 <?php
 ?>
-<section class="relative text-white py-20 lg:py-32 overflow-hidden mx-16">
+<section class="relative text-white py-20 lg:py-12 overflow-hidden mx-16">
     <!-- Background decorative elements - Golden light streaks from top right -->
     <div class="absolute inset-0 rounded-3xl overflow-hidden">
         <img src="/assets/images/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
