@@ -97,5 +97,8 @@ $showPageTitle = $showPageTitle ?? true;
 
     <?php include __DIR__ . '/../components/common/footer.php'; ?>
 
+    <!-- Main JavaScript -->
+    <script src="/assets/js/main.js"></script>
+
     </body>
 </html>

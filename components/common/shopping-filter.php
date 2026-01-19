@@ -108,85 +108,189 @@
             <!-- PRICE SLIDER -->
             <div class="mb-5">
                 <h2 class="text-xl font-bold text-[#000000]">Price</h2>
-                <div class="wrapper">
-                    <div class="slider-track"></div>
-                    <input type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
-                    <input type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
-
-                </div>
-                <div class="flex justify-between gap-3 items-center mt-4">
-                    <span id="range1" class="text-black border border-[#D7D7D7] rounded-md px-4 py-2 flex-1">
-                        0
-                    </span>
-                    <span class="text-black">-</span>
-                    <span id="range2" class="text-black border border-[#D7D7D7] rounded-md px-4 py-2 flex-1">
-                        100
-                    </span>
+                <div class="flex flex-col gap-2">
+                    <div class="relative h-8 flex items-center">
+                        <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
+                        <div id="priceSliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                        <input id="priceMin" type="range" min="100" max="10000" value="100" step="100"
+                            class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 2;" />
+                        <input id="priceMax" type="range" min="100" max="10000" value="10000" step="100"
+                            class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 1;" />
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="text" readonly id="priceMinInput" value="$ 500" class="w-full grow px-4 py-2 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <span class="text-xl text-[#bbbbbb]">—</span>
+                        <input type="text" readonly id="priceMaxInput" value="$ 8,500" class="w-full grow px-4 py-2 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                    </div>
                 </div>
             </div>
             <!-- CARAT SLIDER -->
             <div class="mb-0">
                 <h2 class="text-xl font-bold text-[#000000]">Carat</h2>
                 <div class="flex flex-col gap-2">
-                    <div class="relative h-10 flex items-center">
+                    <div class="relative h-8 flex items-center">
                         <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
                         <div id="caratSliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
-                        <input id="caratMin" type="range" min="0.15" max="24" value="0.15" step="0.01"
+                        <input id="caratMin" type="range" min="0.15" max="35" value="0.15" step="0.01"
                             class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
                             style="top: 50%; margin-top: -8px; z-index: 2;" />
-                        <input id="caratMax" type="range" min="0.15" max="24" value="24" step="0.01"
+                        <input id="caratMax" type="range" min="0.15" max="35" value="35" step="0.01"
                             class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
                             style="top: 50%; margin-top: -8px; z-index: 1;" />
                     </div>
                     <div class="flex items-center gap-3">
-                        <input type="text" readonly id="caratMinInput" value="0.15" class="w-28 px-4 py-2 bg-[#F6F6F6] border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <input type="text" readonly id="caratMinInput" value="0.15" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
                         <span class="text-xl text-[#bbbbbb]">—</span>
-                        <input type="text" readonly id="caratMaxInput" value="24" class="w-28 px-4 py-2 bg-[#F6F6F6] border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <input type="text" readonly id="caratMaxInput" value="24" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
                     </div>
                 </div>
             </div>
-            <script>
-                window.onload = function() {
-                    slideOne();
-                    slideTwo();
-                };
-
-                let sliderOne = document.getElementById("slider-1");
-                let sliderTwo = document.getElementById("slider-2");
-                let displayValOne = document.getElementById("range1");
-                let displayValTwo = document.getElementById("range2");
-                let minGap = 0;
-                let sliderTrack = document.querySelector(".slider-track");
-                let sliderMaxValue = document.getElementById("slider-1").max;
-
-                function slideOne() {
-                    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-                        sliderOne.value = parseInt(sliderTwo.value) - minGap;
-                    }
-                    displayValOne.textContent = sliderOne.value;
-                    fillColor();
-                }
-
-                function slideTwo() {
-                    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-                        sliderTwo.value = parseInt(sliderOne.value) + minGap;
-                    }
-                    displayValTwo.textContent = sliderTwo.value;
-                    fillColor();
-                }
-
-                function fillColor() {
-                    percent1 = (sliderOne.value / sliderMaxValue) * 100;
-                    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-                    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #000 ${percent1}% , #000 ${percent2}%, #dadae5 ${percent2}%)`;
-                }
-            </script>
         </div>
+        <hr class="my-6 col-span-full">
         <div class="col-span-5">
+            <!-- Metal Selection -->
+            <div class="">
+                <h3 class="text-xl font-bold text-[#000000] mb-6">Metal</h3>
+                <div class="flex items-center gap-6 text-black">
+                    <!-- 18K Yellow -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="yellow" class="hidden" onchange="updateMetalBorder(this)" checked>
+                        <div class="flex flex-col items-center">
+                            <div id="yellow-border" class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#FFD700]"></div>
+                            </div>
+                            <span class="text-sm font-medium">18K Yellow</span>
+                        </div>
+                    </label>
 
+                    <!-- 18K White -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="white" class="hidden" onchange="updateMetalBorder(this)">
+                        <div class="flex flex-col items-center">
+                            <div id="white-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#F5F5F5]"></div>
+                            </div>
+                            <span class="text-sm font-medium">18K White</span>
+                        </div>
+                    </label>
+
+                    <!-- 14K Rose -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="rose" class="hidden" onchange="updateMetalBorder(this)">
+                        <div class="flex flex-col items-center">
+                            <div id="rose-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#E0BFB8]"></div>
+                            </div>
+                            <span class="text-sm font-medium">14K Rose</span>
+                        </div>
+                    </label>
+
+                    <!-- Platinum -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="platinum" class="hidden" onchange="updateMetalBorder(this)">
+                        <div class="flex flex-col items-center">
+                            <div id="platinum-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#E5E4E2]"></div>
+                            </div>
+                            <span class="text-sm font-medium">Platinum</span>
+                        </div>
+                    </label>
+
+                    <script>
+                        function updateMetalBorder(radio) {
+                            // Reset all borders to gray
+                            document.querySelectorAll('[id$="-border"]').forEach(div => {
+                                div.classList.remove('border-black');
+                                div.classList.add('border-[#E8E8E8]');
+                            });
+
+                            // Set the selected border to black
+                            const selectedBorder = document.getElementById(radio.value + '-border');
+                            if (selectedBorder) {
+                                selectedBorder.classList.remove('border-[#E8E8E8]');
+                                selectedBorder.classList.add('border-black');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
-        <div class="col-span-7">
+        <div class="col-span-7 flex justify-end border-l">
+            <!-- Style Selection -->
+            <div class="">
+                <h3 class="text-xl font-bold text-[#000000] mb-6">Style</h3>
+                <div class="flex flex-wrap items-center gap-3">
+                    <!-- Solitaire -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="solitaire" class="hidden" onchange="updateStyleBorder(this)" checked>
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-black rounded-lg transition text-sm text-[#000000]" id="solitaire-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.11875 6.9375L9.10625 3H9.33125L11.3188 6.9375H7.11875ZM8.65625 15.825L2.1875 8.0625H8.65625V15.825ZM9.78125 15.825V8.0625H16.25L9.78125 15.825ZM12.5563 6.9375L10.6063 3H14.4688L16.4375 6.9375H12.5563ZM2 6.9375L3.96875 3H7.83125L5.88125 6.9375H2Z" fill="black" />
+                            </svg>
+                            <span>Solitaire</span>
+                        </div>
+                    </label>
 
+                    <!-- Halo -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="halo" class="hidden" onchange="updateStyleBorder(this)">
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="halo-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_224_1895)">
+                                    <path d="M9 0C4.02943 0 0 4.02943 0 9C0 13.9706 4.02943 18 9 18C13.9706 18 18 13.9706 18 9C18 4.02943 13.9706 0 9 0ZM9.05933 3.14868L10.4777 7.57726L15.126 7.68163L11.3522 10.3975L12.6892 14.8513L8.93958 12.1014L5.11743 14.7502L6.57421 10.3337L2.87401 7.51684L7.52453 7.53772L9.05933 3.14868Z" fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_224_1895">
+                                        <rect width="18" height="18" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Halo</span>
+                        </div>
+                    </label>
+
+                    <!-- Three Stone -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="three-stone" class="hidden" onchange="updateStyleBorder(this)">
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="three-stone-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 9C12 8.175 12.675 7.5 13.5 7.5C14.325 7.5 15 8.175 15 9C15 9.825 14.325 10.5 13.5 10.5C12.675 10.5 12 9.825 12 9ZM7.5 9C7.5 8.175 8.175 7.5 9 7.5C9.825 7.5 10.5 8.175 10.5 9C10.5 9.825 9.825 10.5 9 10.5C8.175 10.5 7.5 9.825 7.5 9ZM3 9C3 8.175 3.675 7.5 4.5 7.5C5.325 7.5 6 8.175 6 9C6 9.825 5.325 10.5 4.5 10.5C3.675 10.5 3 9.825 3 9ZM9.75 13.5C9.75 12.675 10.425 12 11.25 12C12.075 12 12.75 12.675 12.75 13.5C12.75 14.325 12.075 15 11.25 15C10.425 15 9.75 14.325 9.75 13.5ZM5.25 13.5C5.25 12.675 5.925 12 6.75 12C7.575 12 8.25 12.675 8.25 13.5C8.25 14.325 7.575 15 6.75 15C5.925 15 5.25 14.325 5.25 13.5ZM9.75 4.5C9.75 3.675 10.425 3 11.25 3C12.075 3 12.75 3.675 12.75 4.5C12.75 5.325 12.075 6 11.25 6C10.425 6 9.75 5.325 9.75 4.5ZM5.25 4.5C5.25 3.675 5.925 3 6.75 3C7.575 3 8.25 3.675 8.25 4.5C8.25 5.325 7.575 6 6.75 6C5.925 6 5.25 5.325 5.25 4.5Z" fill="black" />
+                            </svg>
+                            <span>Three Stone</span>
+                        </div>
+                    </label>
+
+                    <!-- Nature -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="nature" class="hidden" onchange="updateStyleBorder(this)">
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="nature-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 9L6.75 1.5L1.5 9H2.895L0 13.5H5.25V16.5H8.25V13.5H13.5L10.605 9H12ZM15.105 9H16.5L11.25 1.5L9.4575 4.0575L13.44 9.75H11.9775L14.3925 13.5H18L15.105 9ZM9.75 14.25H12.75V16.5H9.75V14.25Z" fill="black" />
+                            </svg>
+                            <span>Nature</span>
+                        </div>
+                    </label>
+
+                    <script>
+                        function updateStyleBorder(radio) {
+                            // Reset all style borders to gray
+                            document.querySelectorAll('[id$="-style"]').forEach(div => {
+                                div.classList.remove('border-black');
+                                div.classList.add('border-[#E8E8E8]');
+                            });
+
+                            // Set the selected border to black
+                            const selectedStyle = document.getElementById(radio.value + '-style');
+                            if (selectedStyle) {
+                                selectedStyle.classList.remove('border-[#E8E8E8]');
+                                selectedStyle.classList.add('border-black');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 </div>
