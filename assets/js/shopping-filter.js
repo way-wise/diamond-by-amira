@@ -58,10 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initCaratSliders() {
-    // Initialize all range sliders (price, carat, carat2)
+    // Initialize all range sliders (price, carat, carat2, price2)
     initRangeSlider('price', 'priceMin', 'priceMax', 'priceMinInput', 'priceMaxInput', 'priceSliderTrack');
     initRangeSlider('carat', 'caratMin', 'caratMax', 'caratMinInput', 'caratMaxInput', 'caratSliderTrack');
     initRangeSlider('carat2', 'caratMin2', 'caratMax2', 'caratMinInput2', 'caratMaxInput2', 'caratSliderTrack2');
+    initRangeSlider('price2', 'priceMin2', 'priceMax2', 'priceMinInput2', 'priceMaxInput2', 'priceSliderTrack2');
 }
 
 function initRangeSlider(name, minId, maxId, minInputId, maxInputId, trackId) {

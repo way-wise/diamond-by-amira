@@ -335,114 +335,116 @@
         <hr class="my-6 col-span-full">
         <div class="col-span-6">
             <!-- Color Selection -->
-            <div>
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-xl font-bold text-[#000000] mb-6">Color</h3>
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-black">Color</h3>
                     <!-- Color tabs -->
-                    <div class="flex gap-2 mb-6">
-                        <button type="button" onclick="openColorTab(event, 'white')" class="color-tab active px-4 py-2 rounded-md bg-black text-white">White</button>
-                        <button type="button" onclick="openColorTab(event, 'fancy')" class="color-tab px-4 py-2 rounded-md border border-[#E8E8E8]">Fancy</button>
+                    <div class="flex gap-2">
+                        <button type="button" onclick="openColorTab(event, 'white')" class="color-tab active px-4 py-2 rounded-md bg-black text-white text-sm">White</button>
+                        <button type="button" onclick="openColorTab(event, 'fancy')" class="color-tab px-4 py-2 rounded-md border border-[#E8E8E8] text-black text-sm">Fancy</button>
                     </div>
                 </div>
 
                 <!-- White Color Tab Content -->
                 <div id="white-content" class="color-tab-content">
-                    <div class="color-slider-container">
-                        <div class="color-slider-track">
-                            <div class="color-slider-item">D</div>
-                            <div class="color-slider-item">E</div>
-                            <div class="color-slider-item">F</div>
-                            <div class="color-slider-item">G</div>
-                            <div class="color-slider-item">H</div>
-                            <div class="color-slider-item">I</div>
-                            <div class="color-slider-item">J</div>
-                            <div class="color-slider-item">K</div>
-                            <div class="color-slider-item">L</div>
-                            <div class="color-slider-item">M</div>
-                            <div class="color-slider-item">N</div>
-                            <div class="color-slider-item">O-P</div>
-                            <div class="color-slider-item">Q-R</div>
-                            <div class="color-slider-item">S-Z</div>
+                    <div class="relative">
+                        <input type="range" min="0" max="6" value="6" step="1" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-sm text-black mt-2 px-1">
+                            <span>J</span>
+                            <span>I</span>
+                            <span>H</span>
+                            <span>G</span>
+                            <span>F</span>
+                            <span>E</span>
+                            <span>D</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Fancy Color Tab Content -->
                 <div id="fancy-content" class="color-tab-content hidden">
-                    <div class="grid grid-cols-4 gap-3">
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #FFD700;"></div>
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #F5DEB3;"></div>
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #DAA520;"></div>
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #B8860B;"></div>
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #8B4513;"></div>
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #A0522D;"></div>
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #CD853F;"></div>
-                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #D2691E;"></div>
+                    <div class="grid grid-cols-6 gap-2">
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Yellow</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Pink</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Blue</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Red</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Green</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Purple</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Orange</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Violet</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Gray</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Black</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Brown</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Champagne</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Cognac</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Chameleon</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">White</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">S & P</button>
+                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Other</button>
                     </div>
                 </div>
             </div>
-            <!-- Cut Selection -->
         </div>
-        <div class="col-span-6 flex justify-end border-l">
-            <!-- Clarity Selection -->
-            <div class="">
-                <h3 class="text-xl font-bold text-[#000000] mb-6">Style</h3>
-                <div class="flex flex-wrap items-center gap-3">
-                    <!-- Solitaire -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="style" value="solitaire" class="hidden" checked onchange="updateStyleBorder(this)">
-                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-black rounded-lg transition text-sm text-[#000000]" id="solitaire-style">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.11875 6.9375L9.10625 3H9.33125L11.3188 6.9375H7.11875ZM8.65625 15.825L2.1875 8.0625H8.65625V15.825ZM9.78125 15.825V8.0625H16.25L9.78125 15.825ZM12.5563 6.9375L10.6063 3H14.4688L16.4375 6.9375H12.5563ZM2 6.9375L3.96875 3H7.83125L5.88125 6.9375H2Z" fill="black" />
-                            </svg>
-                            <span>Solitaire</span>
-                        </div>
-                    </label>
-
-                    <!-- Halo -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="style" value="halo" class="hidden" onchange="updateStyleBorder(this)">
-                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="halo-style">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_224_1895)">
-                                    <path d="M9 0C4.02943 0 0 4.02943 0 9C0 13.9706 4.02943 18 9 18C13.9706 18 18 13.9706 18 9C18 4.02943 13.9706 0 9 0ZM9.05933 3.14868L10.4777 7.57726L15.126 7.68163L11.3522 10.3975L12.6892 14.8513L8.93958 12.1014L5.11743 14.7502L6.57421 10.3337L2.87401 7.51684L7.52453 7.53772L9.05933 3.14868Z" fill="black" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_224_1895">
-                                        <rect width="18" height="18" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <span>Halo</span>
-                        </div>
-                    </label>
-
-                    <!-- Three Stone -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="style" value="three-stone" class="hidden" onchange="updateStyleBorder(this)">
-                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="three-stone-style">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 9C12 8.175 12.675 7.5 13.5 7.5C14.325 7.5 15 8.175 15 9C15 9.825 14.325 10.5 13.5 10.5C12.675 10.5 12 9.825 12 9ZM7.5 9C7.5 8.175 8.175 7.5 9 7.5C9.825 7.5 10.5 8.175 10.5 9C10.5 9.825 9.825 10.5 9 10.5C8.175 10.5 7.5 9.825 7.5 9ZM3 9C3 8.175 3.675 7.5 4.5 7.5C5.325 7.5 6 8.175 6 9C6 9.825 5.325 10.5 4.5 10.5C3.675 10.5 3 9.825 3 9ZM9.75 13.5C9.75 12.675 10.425 12 11.25 12C12.075 12 12.75 12.675 12.75 13.5C12.75 14.325 12.075 15 11.25 15C10.425 15 9.75 14.325 9.75 13.5ZM5.25 13.5C5.25 12.675 5.925 12 6.75 12C7.575 12 8.25 12.675 8.25 13.5C8.25 14.325 7.575 15 6.75 15C5.925 15 5.25 14.325 5.25 13.5ZM9.75 4.5C9.75 3.675 10.425 3 11.25 3C12.075 3 12.75 3.675 12.75 4.5C12.75 5.325 12.075 6 11.25 6C10.425 6 9.75 5.325 9.75 4.5ZM5.25 4.5C5.25 3.675 5.925 3 6.75 3C7.575 3 8.25 3.675 8.25 4.5C8.25 5.325 7.575 6 6.75 6C5.925 6 5.25 5.325 5.25 4.5Z" fill="black" />
-                            </svg>
-                            <span>Three Stone</span>
-                        </div>
-                    </label>
-
-                    <!-- Nature -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="style" value="nature" class="hidden" onchange="updateStyleBorder(this)">
-                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="nature-style">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 9L6.75 1.5L1.5 9H2.895L0 13.5H5.25V16.5H8.25V13.5H13.5L10.605 9H12ZM15.105 9H16.5L11.25 1.5L9.4575 4.0575L13.44 9.75H11.9775L14.3925 13.5H18L15.105 9ZM9.75 14.25H12.75V16.5H9.75V14.25Z" fill="black" />
-                            </svg>
-                            <span>Nature</span>
-                        </div>
-                    </label>
-
+        <div class="col-span-6">
+            <!-- Clarity Slider -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-black mb-4">Clarity</h3>
+                <div class="relative">
+                    <input type="range" min="0" max="10" value="0" step="1" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-xs text-black mt-2 px-1">
+                        <span>I3</span>
+                        <span>I2</span>
+                        <span>I1</span>
+                        <span>SI2</span>
+                        <span>SI1</span>
+                        <span>VS2</span>
+                        <span>VS1</span>
+                        <span>VVS2</span>
+                        <span>VVS1</span>
+                        <span>IF</span>
+                        <span>FL</span>
+                    </div>
                 </div>
             </div>
-            <!-- Price Slider -->
         </div>
+        <div class="col-span-6">
+            <!-- Cut Slider -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-black mb-4">Cut</h3>
+                <div class="relative">
+                    <input type="range" min="0" max="2" value="0" step="1" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-sm text-black mt-2 px-1">
+                        <span>Very Good</span>
+                        <span>Excellent</span>
+                        <span>Ideal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-6">
+            <!-- Price Slider -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-black mb-4">Price</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="relative h-8 flex items-center">
+                        <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
+                        <div id="priceSliderTrack2" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                        <input id="priceMin2" type="range" min="500" max="8500" value="500" step="100"
+                            class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 2;" />
+                        <input id="priceMax2" type="range" min="500" max="8500" value="8500" step="100"
+                            class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 1;" />
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="text" readonly id="priceMinInput2" value="$ 500" class="w-full grow px-4 py-2 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <span class="text-xl text-[#bbbbbb]">—</span>
+                        <input type="text" readonly id="priceMaxInput2" value="$ 8,500" class="w-full grow px-4 py-2 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 col-span-full">
     </div>
 </div>
 
