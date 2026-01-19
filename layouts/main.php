@@ -74,7 +74,7 @@ $showPageTitle = $showPageTitle ?? true;
     <?php endif; ?>
 </head>
 
-<body class="min-h-screen flex flex-col bg-white font-sans">
+<body class="min-h-screen flex flex-col bg-white font-sans overflow-x-hidden">
     <?php include __DIR__ . '/../components/common/topbar.php'; ?>
 
     <?php include __DIR__ . '/../components/common/navbar.php'; ?>
