@@ -40,6 +40,8 @@ $showPageTitle = $showPageTitle ?? true;
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include external CSS -->
+    <link rel="stylesheet" href="/assets/css/color-slider.css">
     <script>
         tailwind.config = {
             theme: {

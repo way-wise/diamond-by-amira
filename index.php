@@ -18,6 +18,8 @@ ob_start();
 <!-- Redefining Elegance Banner -->
 <?php include __DIR__ . '/components/elegance-banner.php'; ?>
 
+<!-- Most Selling Rings Category -->
+<?php include __DIR__ . '/components/most-selling-rings.php'; ?>
 
 <?php
 $content = ob_get_clean();

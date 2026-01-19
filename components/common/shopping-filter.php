@@ -1,5 +1,4 @@
-<!-- Include external CSS -->
-<link rel="stylesheet" href="/assets/css/color-slider.css">
+
 
 <!-- tab list -->
 
