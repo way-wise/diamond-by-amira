@@ -1,9 +1,7 @@
-
-
 <!-- tab list -->
 
-<div class="px-6 py-5 rounded-2xl bg-white border border-[#D7D7D7]">
-    <div class="grid grid-cols-3 gap-8">
+<div class="px-3 md:px-6 py-3 md:py-5 rounded-2xl bg-white border border-[#D7D7D7]">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8">
         <!-- step 1 -->
         <button onclick="openTab(event, 'tab1')" class="tab-button focus:outline-none py-4 px-6 rounded-xl bg-[#F7F5F5] text-black flex items-center justify-between cursor-pointer transition-colors active">
             <div class="flex items-center gap-4 text-black">
@@ -71,9 +69,9 @@
 </div>
 
 <!-- tab content for step 1 -->
-<div id="tab1" class="tab-content p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl">
-    <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-7">
+<div id="tab1" class="tab-content p-4 md:p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div class="lg:col-span-7">
             <div class="flex items-center justify-between mb-5">
                 <h2 class="text-xl font-bold text-[#000000]">Shape</h2>
                 <button class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2">

@@ -101,10 +101,10 @@
     </div>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[200] lg:hidden hidden transition-opacity duration-300"></div>
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[200] lg:hidden hidden transition-opacity duration-300" style="top: 0 !important;"></div>
     
     <!-- Mobile Menu Sidebar -->
-    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-[201] lg:hidden transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+    <div id="mobile-menu" class="fixed top-0 left-0 h-screen w-80 bg-white z-[201] lg:hidden transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto" style="top: 0 !important;">
         <div class="p-6">
             <!-- Close Button -->
             <div class="flex items-center justify-between mb-6">
