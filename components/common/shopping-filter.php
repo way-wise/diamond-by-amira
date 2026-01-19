@@ -79,7 +79,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="grid grid-cols-6 gap-4 text-black">
+            <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
                 <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
                     <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
                     <h2>Round</h2>
@@ -265,7 +265,7 @@
 </div>
 
 <!-- tab content for step 2 -->
-<div id="tab2" class="tab-content p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl hidden">
+<div id="tab2" class="tab-content p-5 md:p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl hidden">
     <div class="grid lg:grid-cols-12 gap-4">
         <div class="lg:col-span-7">
             <div class="flex items-center justify-between mb-5">
@@ -277,7 +277,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="flex flex-wrap gap-4 text-black">
+            <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
                 <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
                     <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
                     <h2>Round</h2>
