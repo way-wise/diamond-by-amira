@@ -1,0 +1,71 @@
+/* Color Slider Styles */
+.color-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.color-slider-track {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding-bottom: 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.color-slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+.color-slider-item {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.color-slider-item:hover,
+.color-slider-item.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* Fancy color options */
+.fancy-color-option {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fancy-color-option:hover,
+.fancy-color-option.active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Color tab styles */
+.color-tab {
+    background-color: white;
+    border: 1px solid #E8E8E8;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.color-tab.active,
+.color-tab:hover {
+    background-color: #000;
+    color: white;
+    border-color: #000;
+}
+
+/* Color tab content visibility is controlled by Tailwind's hidden class */

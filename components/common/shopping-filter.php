@@ -1,44 +1,12 @@
-<script>
-function openTab(evt, tabName) {
-    // Hide all tab content
-    var tabContents = document.getElementsByClassName('tab-content');
-    for (var i = 0; i < tabContents.length; i++) {
-        tabContents[i].classList.add('hidden');
-    }
-    
-    // Remove active class from all tabs
-    var tabButtons = document.getElementsByClassName('tab-button');
-    for (var i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove('bg-[#F7F5F5]', 'text-black');
-        tabButtons[i].classList.add('bg-transparent', 'text-[#666666]');
-    }
-    
-    // Show the current tab and add active class
-    document.getElementById(tabName).classList.remove('hidden');
-    evt.currentTarget.classList.remove('bg-transparent', 'text-[#666666]');
-    evt.currentTarget.classList.add('bg-[#F7F5F5]', 'text-black');
-}
-
-// Show first tab by default
-document.addEventListener('DOMContentLoaded', function() {
-    // Show first tab content
-    document.getElementById('tab1').classList.remove('hidden');
-    
-    // Set first tab as active
-    var firstTab = document.querySelector('.tab-button');
-    if (firstTab) {
-        firstTab.classList.add('bg-[#F7F5F5]', 'text-black');
-        firstTab.classList.remove('bg-transparent', 'text-[#666666]');
-    }
-});
-</script>
+<!-- Include external CSS -->
+<link rel="stylesheet" href="/assets/css/color-slider.css">
 
 <!-- tab list -->
 
 <div class="px-6 py-5 rounded-2xl bg-white border border-[#D7D7D7]">
     <div class="grid grid-cols-3 gap-8">
         <!-- step 1 -->
-        <button onclick="openTab(event, 'tab1')" class="tab-button focus:outline-none py-4 px-6 rounded-xl bg-transparent text-[#666666] flex items-center justify-between cursor-pointer transition-colors">
+        <button onclick="openTab(event, 'tab1')" class="tab-button focus:outline-none py-4 px-6 rounded-xl bg-[#F7F5F5] text-black flex items-center justify-between cursor-pointer transition-colors active">
             <div class="flex items-center gap-4 text-black">
                 <span class="inline-block text-[40px] leading-[120%] font-bold text-[#000000]">1</span>
                 <div class="flex flex-col gap-1">
@@ -96,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="p-[9px] border border-[#D7D7D7] bg-white rounded-md">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 11.375C11.3476 11.375 7.5625 15.1601 7.5625 19.8125C7.98669 30.9906 24.0151 30.9876 24.4375 19.8124C24.4375 15.1601 20.6525 11.375 16 11.375ZM16 26.375C12.3814 26.375 9.4375 23.4311 9.4375 19.8125C9.76744 11.1184 22.2339 11.1208 22.5625 19.8126C22.5625 23.4311 19.6186 26.375 16 26.375Z" fill="#7B7B7B" />
-                    <path d="M19.9228 8.27281L21.8017 5.1735C21.9443 4.93819 21.9764 4.65213 21.8894 4.39106L20.6394 0.641062C20.5118 0.258188 20.1535 0 19.75 0H12.25C11.8464 0 11.4882 0.258188 11.3606 0.641062L10.1106 4.39106C10.0235 4.65213 10.0557 4.93819 10.1983 5.1735L12.0771 8.27281C-0.778101 12.8627 2.17952 31.7316 16.0001 32C29.8227 31.7304 32.7761 12.8603 19.9228 8.27281ZM12.9257 1.875H19.0743L19.6993 3.75H12.3006L12.9257 1.875ZM19.3353 5.625L18.0208 7.7935C16.7123 7.56987 15.2876 7.56987 13.9791 7.7935L12.6646 5.625H19.3353ZM16 30.125C10.3136 30.125 5.68746 25.4988 5.68746 19.8125C6.2059 6.15038 25.7961 6.15406 26.3125 19.8126C26.3125 25.4988 21.6863 30.125 16 30.125Z" fill="#7B7B7B" />
+                    <path d="M19.9228 8.27281L21.8017 5.1735C21.9443 4.93819 21.9764 4.65213 21.8894 4.39106L20.6394 0.641062C20.5118 0.258188 20.1535 0 19.75 0H12.25C11.8464 0 11.4882 0.258188 11.3606 0.641062L10.1106 4.39106C10.0235 4.65213 10.0557 4.93819 10.1983 5.1735L12.0771 8.27281C-0.778101 12.8627 2.17952 31.7316 16.0001 32C29.8227 31.7304 32.7761 12.8603 19.9228 8.27281ZM12.9257 1.875H19.0743L19.6993 3.75H12.3006L12.9257 1.875ZM19.3353 5.625L18.0208 7.7935C16.7123 7.56987 15.2876 7.56987 13.9791 7.7935L12.6646 5.625H19.3353ZM4.63206 15.9378H9.11735L12.4813 24.9084L4.63206 15.9378ZM15 26.6184L10.9948 15.9378H19.0052L15 26.6184ZM17.5186 24.9085L20.8826 15.9378H25.3679L17.5186 24.9085ZM21.6957 14.1799L23.7892 9.99284L25.8828 14.1799H21.6957Z" fill="#7B7B7B" />
                 </svg>
             </div>
         </div>
@@ -104,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- tab content for step 1 -->
-<div id="tab1" class="tab-content p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl hidden">
+<div id="tab1" class="tab-content p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl">
     <div class="grid grid-cols-12 gap-4">
         <div class="col-span-7">
             <div class="flex items-center justify-between mb-5">
@@ -195,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="flex items-center gap-6 text-black">
                     <!-- 18K Yellow -->
                     <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="metal" value="yellow" class="hidden" onchange="updateMetalBorder(this)" checked>
+                        <input type="radio" name="metal" value="yellow" class="hidden" checked onchange="updateMetalBorder(this)">
                         <div class="flex flex-col items-center">
                             <div id="yellow-border" class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center mb-1">
                                 <div class="w-10 h-10 rounded-full bg-[#FFD700]"></div>
@@ -236,23 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             <span class="text-sm font-medium">Platinum</span>
                         </div>
                     </label>
-
-                    <script>
-                        function updateMetalBorder(radio) {
-                            // Reset all borders to gray
-                            document.querySelectorAll('[id$="-border"]').forEach(div => {
-                                div.classList.remove('border-black');
-                                div.classList.add('border-[#E8E8E8]');
-                            });
-
-                            // Set the selected border to black
-                            const selectedBorder = document.getElementById(radio.value + '-border');
-                            if (selectedBorder) {
-                                selectedBorder.classList.remove('border-[#E8E8E8]');
-                                selectedBorder.classList.add('border-black');
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </div>
@@ -263,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="flex flex-wrap items-center gap-3">
                     <!-- Solitaire -->
                     <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="style" value="solitaire" class="hidden" onchange="updateStyleBorder(this)" checked>
+                        <input type="radio" name="style" value="solitaire" class="hidden" checked onchange="updateStyleBorder(this)">
                         <div class="flex items-center gap-2 px-4 py-2 border-2 border-black rounded-lg transition text-sm text-[#000000]" id="solitaire-style">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.11875 6.9375L9.10625 3H9.33125L11.3188 6.9375H7.11875ZM8.65625 15.825L2.1875 8.0625H8.65625V15.825ZM9.78125 15.825V8.0625H16.25L9.78125 15.825ZM12.5563 6.9375L10.6063 3H14.4688L16.4375 6.9375H12.5563ZM2 6.9375L3.96875 3H7.83125L5.88125 6.9375H2Z" fill="black" />
@@ -312,22 +263,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </label>
 
-                    <script>
-                        function updateStyleBorder(radio) {
-                            // Reset all style borders to gray
-                            document.querySelectorAll('[id$="-style"]').forEach(div => {
-                                div.classList.remove('border-black');
-                                div.classList.add('border-[#E8E8E8]');
-                            });
-
-                            // Set the selected border to black
-                            const selectedStyle = document.getElementById(radio.value + '-style');
-                            if (selectedStyle) {
-                                selectedStyle.classList.remove('border-[#E8E8E8]');
-                                selectedStyle.classList.add('border-black');
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </div>
@@ -353,23 +288,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h2>Round</h2>
                 </div>
                 <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
-                    <h2>Round</h2>
-                </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/oval.png" alt="Round" class="size-16 object-cover">
+                    <img src="/assets/images/shapes/oval.png" alt="Oval" class="size-16 object-cover">
                     <h2>Oval</h2>
                 </div>
                 <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/cushion.png" alt="Round" class="size-16 object-cover">
+                    <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="size-16 object-cover">
                     <h2>Cushion</h2>
                 </div>
                 <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/princess.png" alt="Round" class="size-16 object-cover">
+                    <img src="/assets/images/shapes/emerald.png" alt="Emerald" class="size-16 object-cover">
+                    <h2>Emerald</h2>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                    <img src="/assets/images/shapes/princess.png" alt="Princess" class="size-16 object-cover">
                     <h2>Princess</h2>
                 </div>
                 <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/radiant.png" alt="Round" class="size-16 object-cover">
+                    <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="size-16 object-cover">
                     <h2>Radiant</h2>
                 </div>
             </div>
@@ -381,99 +316,81 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="flex flex-col gap-2">
                     <div class="relative h-8 flex items-center">
                         <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
-                        <div id="caratSliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
-                        <input id="caratMin" type="range" min="0.15" max="35" value="0.15" step="0.01"
+                        <div id="caratSliderTrack2" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                        <input id="caratMin2" type="range" min="0.15" max="35" value="0.15" step="0.01"
                             class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
                             style="top: 50%; margin-top: -8px; z-index: 2;" />
-                        <input id="caratMax" type="range" min="0.15" max="35" value="35" step="0.01"
+                        <input id="caratMax2" type="range" min="0.15" max="35" value="35" step="0.01"
                             class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
                             style="top: 50%; margin-top: -8px; z-index: 1;" />
                     </div>
                     <div class="flex items-center gap-3">
-                        <input type="text" readonly id="caratMinInput" value="0.15" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <input type="text" readonly id="caratMinInput2" value="0.15" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
                         <span class="text-xl text-[#bbbbbb]">—</span>
-                        <input type="text" readonly id="caratMaxInput" value="24" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <input type="text" readonly id="caratMaxInput2" value="24" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
                     </div>
                 </div>
             </div>
         </div>
         <hr class="my-6 col-span-full">
         <div class="col-span-6">
-            <!-- Metal Selection -->
-            <div class="">
-                <h3 class="text-xl font-bold text-[#000000] mb-6">Metal</h3>
-                <div class="flex items-center gap-6 text-black">
-                    <!-- 18K Yellow -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="metal" value="yellow" class="hidden" onchange="updateMetalBorder(this)" checked>
-                        <div class="flex flex-col items-center">
-                            <div id="yellow-border" class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center mb-1">
-                                <div class="w-10 h-10 rounded-full bg-[#FFD700]"></div>
-                            </div>
-                            <span class="text-sm font-medium">18K Yellow</span>
+            <!-- Color Selection -->
+            <div>
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-[#000000] mb-6">Color</h3>
+                    <!-- Color tabs -->
+                    <div class="flex gap-2 mb-6">
+                        <button type="button" onclick="openColorTab(event, 'white')" class="color-tab active px-4 py-2 rounded-md bg-black text-white">White</button>
+                        <button type="button" onclick="openColorTab(event, 'fancy')" class="color-tab px-4 py-2 rounded-md border border-[#E8E8E8]">Fancy</button>
+                    </div>
+                </div>
+
+                <!-- White Color Tab Content -->
+                <div id="white-content" class="color-tab-content">
+                    <div class="color-slider-container">
+                        <div class="color-slider-track">
+                            <div class="color-slider-item">D</div>
+                            <div class="color-slider-item">E</div>
+                            <div class="color-slider-item">F</div>
+                            <div class="color-slider-item">G</div>
+                            <div class="color-slider-item">H</div>
+                            <div class="color-slider-item">I</div>
+                            <div class="color-slider-item">J</div>
+                            <div class="color-slider-item">K</div>
+                            <div class="color-slider-item">L</div>
+                            <div class="color-slider-item">M</div>
+                            <div class="color-slider-item">N</div>
+                            <div class="color-slider-item">O-P</div>
+                            <div class="color-slider-item">Q-R</div>
+                            <div class="color-slider-item">S-Z</div>
                         </div>
-                    </label>
+                    </div>
+                </div>
 
-                    <!-- 18K White -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="metal" value="white" class="hidden" onchange="updateMetalBorder(this)">
-                        <div class="flex flex-col items-center">
-                            <div id="white-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
-                                <div class="w-10 h-10 rounded-full bg-[#F5F5F5]"></div>
-                            </div>
-                            <span class="text-sm font-medium">18K White</span>
-                        </div>
-                    </label>
-
-                    <!-- 14K Rose -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="metal" value="rose" class="hidden" onchange="updateMetalBorder(this)">
-                        <div class="flex flex-col items-center">
-                            <div id="rose-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
-                                <div class="w-10 h-10 rounded-full bg-[#E0BFB8]"></div>
-                            </div>
-                            <span class="text-sm font-medium">14K Rose</span>
-                        </div>
-                    </label>
-
-                    <!-- Platinum -->
-                    <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="metal" value="platinum" class="hidden" onchange="updateMetalBorder(this)">
-                        <div class="flex flex-col items-center">
-                            <div id="platinum-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
-                                <div class="w-10 h-10 rounded-full bg-[#E5E4E2]"></div>
-                            </div>
-                            <span class="text-sm font-medium">Platinum</span>
-                        </div>
-                    </label>
-
-                    <script>
-                        function updateMetalBorder(radio) {
-                            // Reset all borders to gray
-                            document.querySelectorAll('[id$="-border"]').forEach(div => {
-                                div.classList.remove('border-black');
-                                div.classList.add('border-[#E8E8E8]');
-                            });
-
-                            // Set the selected border to black
-                            const selectedBorder = document.getElementById(radio.value + '-border');
-                            if (selectedBorder) {
-                                selectedBorder.classList.remove('border-[#E8E8E8]');
-                                selectedBorder.classList.add('border-black');
-                            }
-                        }
-                    </script>
+                <!-- Fancy Color Tab Content -->
+                <div id="fancy-content" class="color-tab-content hidden">
+                    <div class="grid grid-cols-4 gap-3">
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #FFD700;"></div>
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #F5DEB3;"></div>
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #DAA520;"></div>
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #B8860B;"></div>
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #8B4513;"></div>
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #A0522D;"></div>
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #CD853F;"></div>
+                        <div class="fancy-color-option h-10 rounded-md cursor-pointer" style="background-color: #D2691E;"></div>
+                    </div>
                 </div>
             </div>
+            <!-- Cut Selection -->
         </div>
         <div class="col-span-6 flex justify-end border-l">
-            <!-- Style Selection -->
+            <!-- Clarity Selection -->
             <div class="">
                 <h3 class="text-xl font-bold text-[#000000] mb-6">Style</h3>
                 <div class="flex flex-wrap items-center gap-3">
                     <!-- Solitaire -->
                     <label class="flex items-center cursor-pointer">
-                        <input type="radio" name="style" value="solitaire" class="hidden" onchange="updateStyleBorder(this)" checked>
+                        <input type="radio" name="style" value="solitaire" class="hidden" checked onchange="updateStyleBorder(this)">
                         <div class="flex items-center gap-2 px-4 py-2 border-2 border-black rounded-lg transition text-sm text-[#000000]" id="solitaire-style">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.11875 6.9375L9.10625 3H9.33125L11.3188 6.9375H7.11875ZM8.65625 15.825L2.1875 8.0625H8.65625V15.825ZM9.78125 15.825V8.0625H16.25L9.78125 15.825ZM12.5563 6.9375L10.6063 3H14.4688L16.4375 6.9375H12.5563ZM2 6.9375L3.96875 3H7.83125L5.88125 6.9375H2Z" fill="black" />
@@ -522,24 +439,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </label>
 
-                    <script>
-                        function updateStyleBorder(radio) {
-                            // Reset all style borders to gray
-                            document.querySelectorAll('[id$="-style"]').forEach(div => {
-                                div.classList.remove('border-black');
-                                div.classList.add('border-[#E8E8E8]');
-                            });
-
-                            // Set the selected border to black
-                            const selectedStyle = document.getElementById(radio.value + '-style');
-                            if (selectedStyle) {
-                                selectedStyle.classList.remove('border-[#E8E8E8]');
-                                selectedStyle.classList.add('border-black');
-                            }
-                        }
-                    </script>
                 </div>
             </div>
+            <!-- Price Slider -->
         </div>
     </div>
 </div>
+
+<!-- Include external JavaScript at the end of the body with defer to ensure DOM is ready -->
+<script src="/assets/js/shopping-filter.js" defer></script>
