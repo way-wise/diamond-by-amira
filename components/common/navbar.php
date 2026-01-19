@@ -5,7 +5,7 @@
     <div class="container-wrapper">
         <div class="flex justify-between items-center h-20">
             <!-- Left side - Empty space -->
-            <div class="flex-1 flex justify-start items-center">
+            <div class="flex-1 hidden lg:flex justify-start items-center">
                 <!-- Navigation Menu Items (on right side of logo) -->
                 <div class="hidden lg:flex items-center gap-5">
                     <!-- Fine Jewelry Menu Item -->
@@ -31,7 +31,7 @@
 
             </div>
             <!-- Center - Logo -->
-            <div class="flex-1 flex justify-center">
+            <div class="flex-1 flex lg:justify-center">
                 <a href="/" class="text-2xl font-bold text-gray-900 tracking-wide hover:text-gray-700 transition-colors">
                     <img src="/assets/images/logo.png" alt="Logo" class="h-12 w-auto">
                 </a>

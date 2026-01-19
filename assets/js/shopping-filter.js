@@ -240,6 +240,18 @@ function openTab(evt, tabName) {
     tabButtons.forEach(button => {
         button.classList.remove('active', 'bg-[#F7F5F5]', 'text-black');
         button.classList.add('bg-transparent', 'text-[#666666]');
+        
+        // Hide number and text on mobile for inactive tabs
+        const tabNumber = button.querySelector('.tab-number');
+        const tabText = button.querySelector('.tab-text');
+        if (tabNumber) {
+            tabNumber.classList.add('hidden');
+            tabNumber.classList.remove('md:inline-block');
+        }
+        if (tabText) {
+            tabText.classList.add('hidden');
+            tabText.classList.remove('md:flex');
+        }
     });
     
     // Show the selected tab content
@@ -253,6 +265,18 @@ function openTab(evt, tabName) {
     if (clickedButton) {
         clickedButton.classList.add('active', 'bg-[#F7F5F5]', 'text-black');
         clickedButton.classList.remove('bg-transparent', 'text-[#666666]');
+        
+        // Show number and text for active tab on mobile
+        const activeTabNumber = clickedButton.querySelector('.tab-number');
+        const activeTabText = clickedButton.querySelector('.tab-text');
+        if (activeTabNumber) {
+            activeTabNumber.classList.remove('hidden');
+            activeTabNumber.classList.add('block', 'md:inline-block');
+        }
+        if (activeTabText) {
+            activeTabText.classList.remove('hidden');
+            activeTabText.classList.add('flex', 'md:flex');
+        }
     }
 }
 

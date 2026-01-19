@@ -31,7 +31,7 @@ $showPageTitle = $showPageTitle ?? true;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo isset($pageDescription) ? htmlspecialchars($pageDescription) : 'A clean, minimal static website template'; ?>">
-    <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) : 'Static PHP Template'; ?></title>
+    <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) : 'Diamond By Amira'; ?></title>
 
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
