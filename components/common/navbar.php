@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<nav class="bg-white shadow-sm sticky top-0 z-50 relative">
+<nav class="bg-white shadow-sm sticky top-0 z-[100] relative">
     <div class="container-wrapper">
         <div class="flex justify-between items-center h-20">
             <!-- Left side - Empty space -->
@@ -79,20 +79,112 @@
                     </button>
 
                     <!-- Cart Icon -->
-                    <button class="text-gray-700 hover:text-gray-900 transition-colors relative" aria-label="Shopping Cart">
+                    <button id="cart-toggle" class="text-gray-700 hover:text-gray-900 transition-colors relative" aria-label="Shopping Cart">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10M3.103 6.034H20.897M3.4 5.467C3.14036 5.81319 3 6.23426 3 6.667V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6.667C21 6.23426 20.8596 5.81319 20.6 5.467L18.6 2.8C18.4137 2.55161 18.1721 2.35 17.8944 2.21115C17.6167 2.07229 17.3105 2 17 2H7C6.68951 2 6.38328 2.07229 6.10557 2.21115C5.82786 2.35 5.58629 2.55161 5.4 2.8L3.4 5.467Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
                     </button>                   
                 </div>
 
                 <!-- Mobile menu button -->
-                <button class="lg:hidden ml-4 text-gray-700 hover:text-gray-900" aria-label="Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-toggle" class="lg:hidden ml-4 text-gray-700 hover:text-gray-900" aria-label="Menu">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[200] lg:hidden hidden transition-opacity duration-300"></div>
+    
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-[201] lg:hidden transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+        <div class="p-6">
+            <!-- Close Button -->
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-bold text-gray-900">Menu</h2>
+                <button id="mobile-menu-close" class="text-gray-700 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="space-y-1">
+                <!-- Fine Jewelry - Has Megamenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-menu-trigger w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                        <span class="font-medium">Fine Jewelry</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-submenu hidden overflow-hidden">
+                        <div class="px-4 py-2 space-y-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Rings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Necklaces</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Bracelets</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Earrings</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bridal - Has Megamenu -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-menu-trigger w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                        <span class="font-medium">Bridal</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-submenu hidden overflow-hidden">
+                        <div class="px-4 py-2 space-y-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Engagement Rings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Wedding Bands</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Bridal Sets</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Watches - Simple Dropdown -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-menu-trigger w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                        <span class="font-medium">Watches</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-submenu hidden overflow-hidden">
+                        <div class="px-4 py-2 space-y-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Men's Watches</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Women's Watches</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Luxury Watches</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brands - Simple Dropdown -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-menu-trigger w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                        <span class="font-medium">Brands</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-submenu hidden overflow-hidden">
+                        <div class="px-4 py-2 space-y-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Tiffany & Co.</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Cartier</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded">Bulgari</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,9 +192,119 @@
     <!-- Static HTML Mega Menus - Easy to customize -->
     <?php include __DIR__ . '/../mega-menu/fine-jewelry.html'; ?>
     <?php include __DIR__ . '/../mega-menu/bridal.html'; ?>
+
+    <!-- Simple Dropdown Menus for Watches and Brands -->
+    <div class="simple-dropdown hidden absolute bg-white shadow-lg rounded-lg py-2 min-w-[200px] z-[90]" data-dropdown="Watches" style="top: 80px;">
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Men's Watches</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Women's Watches</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Luxury Watches</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Smart Watches</a>
+    </div>
+
+    <div class="simple-dropdown hidden absolute bg-white shadow-lg rounded-lg py-2 min-w-[200px] z-[90]" data-dropdown="Brands" style="top: 80px;">
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Tiffany & Co.</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Cartier</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Bulgari</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Van Cleef & Arpels</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">Harry Winston</a>
+    </div>
 </nav>
 
 <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            function openMobileMenu() {
+                mobileMenuOverlay.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenuOverlay.classList.add('opacity-100');
+                    mobileMenu.classList.remove('-translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                }, 10);
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMobileMenu() {
+                mobileMenuOverlay.classList.remove('opacity-100');
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('-translate-x-full');
+                setTimeout(() => {
+                    mobileMenuOverlay.classList.add('hidden');
+                }, 300);
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    if (mobileMenu.classList.contains('-translate-x-full')) {
+                        openMobileMenu();
+                } else {
+                    closeMobileMenu();
+                }
+            });
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        }
+
+        // Mobile submenu toggle functionality
+        const mobileMenuTriggers = document.querySelectorAll('.mobile-menu-trigger');
+        
+        mobileMenuTriggers.forEach(trigger => {
+            trigger.addEventListener('click', function() {
+                const menuItem = this.closest('.mobile-menu-item');
+                const submenu = menuItem.querySelector('.mobile-submenu');
+                const arrow = this.querySelector('svg');
+                
+                if (submenu) {
+                    const isHidden = submenu.classList.contains('hidden');
+                    
+                    // Close all other submenus
+                    document.querySelectorAll('.mobile-submenu').forEach(sub => {
+                        if (sub !== submenu) {
+                            sub.classList.add('hidden');
+                            sub.style.maxHeight = '0px';
+                        }
+                    });
+                    
+                    // Reset all arrows
+                    document.querySelectorAll('.mobile-menu-trigger svg').forEach(svg => {
+                        if (svg !== arrow) {
+                            svg.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    if (isHidden) {
+                        submenu.classList.remove('hidden');
+                        submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                        arrow.style.transform = 'rotate(180deg)';
+                    } else {
+                        submenu.style.maxHeight = '0px';
+                        arrow.style.transform = 'rotate(0deg)';
+                        setTimeout(() => {
+                            submenu.classList.add('hidden');
+                        }, 300);
+                    }
+                }
+            });
+        });
+    });
+
     // Mega menu hover functionality
     document.addEventListener('DOMContentLoaded', function() {
         const navItems = document.querySelectorAll('nav .group[data-menu-trigger]');

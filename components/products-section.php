@@ -8,6 +8,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-01.png',
+        'hoverImage' => '/assets/images/products/product-01-hover.png',
         'url' => '#'
     ],
     [
@@ -108,11 +109,16 @@ $products = [
             <?php foreach ($products as $product): ?>
                 <a href="<?php echo htmlspecialchars($product['url']); ?>"
                     class="group border border-[#E5E5E5]">
-                    <div class="bg-gray-100 overflow-hidden aspect-square">
+                    <div class="bg-gray-100 overflow-hidden aspect-square relative">
                         <?php if (isset($product['image']) && file_exists(__DIR__ . '/..' . $product['image'])): ?>
                             <img src="<?php echo htmlspecialchars($product['image']); ?>"
                                 alt="<?php echo htmlspecialchars($product['name']); ?>"
-                                class="size-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                class="size-full object-cover transition-all duration-500 <?php echo isset($product['hoverImage']) ? 'group-hover:opacity-0' : 'group-hover:scale-110'; ?>">
+                            <?php if (isset($product['hoverImage'])): ?>
+                                <img src="<?php echo htmlspecialchars($product['hoverImage']); ?>"
+                                    alt="<?php echo htmlspecialchars($product['name']); ?>"
+                                    class="size-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <?php endif; ?>
                         <?php else: ?>
                             <div class="size-full flex items-center justify-center bg-gray-200">
                                 <span class="text-gray-400 text-xs">Product</span>

@@ -99,6 +99,9 @@ $showPageTitle = $showPageTitle ?? true;
 
     <?php include __DIR__ . '/../components/common/footer.php'; ?>
 
+    <!-- Cart Drawer -->
+    <?php include __DIR__ . '/../components/common/cart-drawer.php'; ?>
+
     <!-- Main JavaScript -->
     <script src="/assets/js/main.js"></script>
 
