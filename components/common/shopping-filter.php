@@ -1,7 +1,44 @@
+<script>
+function openTab(evt, tabName) {
+    // Hide all tab content
+    var tabContents = document.getElementsByClassName('tab-content');
+    for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.add('hidden');
+    }
+    
+    // Remove active class from all tabs
+    var tabButtons = document.getElementsByClassName('tab-button');
+    for (var i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('bg-[#F7F5F5]', 'text-black');
+        tabButtons[i].classList.add('bg-transparent', 'text-[#666666]');
+    }
+    
+    // Show the current tab and add active class
+    document.getElementById(tabName).classList.remove('hidden');
+    evt.currentTarget.classList.remove('bg-transparent', 'text-[#666666]');
+    evt.currentTarget.classList.add('bg-[#F7F5F5]', 'text-black');
+}
+
+// Show first tab by default
+document.addEventListener('DOMContentLoaded', function() {
+    // Show first tab content
+    document.getElementById('tab1').classList.remove('hidden');
+    
+    // Set first tab as active
+    var firstTab = document.querySelector('.tab-button');
+    if (firstTab) {
+        firstTab.classList.add('bg-[#F7F5F5]', 'text-black');
+        firstTab.classList.remove('bg-transparent', 'text-[#666666]');
+    }
+});
+</script>
+
+<!-- tab list -->
+
 <div class="px-6 py-5 rounded-2xl bg-white border border-[#D7D7D7]">
     <div class="grid grid-cols-3 gap-8">
         <!-- step 1 -->
-        <div class="py-4 px-6 rounded-xl bg-[#F7F5F5] flex items-center justify-between">
+        <button onclick="openTab(event, 'tab1')" class="tab-button focus:outline-none py-4 px-6 rounded-xl bg-transparent text-[#666666] flex items-center justify-between cursor-pointer transition-colors">
             <div class="flex items-center gap-4 text-black">
                 <span class="inline-block text-[40px] leading-[120%] font-bold text-[#000000]">1</span>
                 <div class="flex flex-col gap-1">
@@ -12,7 +49,7 @@
             <div class="p-[9px] border border-[#D7D7D7] bg-white rounded-md">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_224_1779)">
-                        <path d="M5.22205 25.9498C7.83381 28.5616 11.3064 30 15 30C18.6936 30 22.1662 28.5616 24.7779 25.9498C27.3898 23.3381 28.8281 19.8655 28.8281 16.1719C28.8281 13.1798 27.8878 10.332 26.1088 7.9364C24.4542 5.7082 22.2194 4.05644 19.6257 3.13799C18.8916 1.30148 17.0955 -1.0257e-06 15 -1.20889e-06C12.9045 -1.39209e-06 11.1084 1.30148 10.3743 3.13799C7.78061 4.05644 5.54584 5.7082 3.89115 7.9364C2.11219 10.332 1.17188 13.1798 1.17188 16.1719C1.17188 19.8655 2.61023 23.3381 5.22205 25.9498ZM15 1.75781C16.777 1.75781 18.2227 3.2035 18.2227 4.98047C18.2227 6.75744 16.777 8.20312 15 8.20312C13.223 8.20312 11.7773 6.75744 11.7773 4.98047C11.7773 3.2035 13.223 1.75781 15 1.75781ZM15 9.96094C16.4167 9.96094 17.6962 9.36533 18.6039 8.4126C21.5886 9.80361 23.5547 12.847 23.5547 16.1719C23.5547 20.889 19.7171 24.7266 15 24.7266C10.2829 24.7266 6.44531 20.889 6.44531 16.1719C6.44531 12.8471 8.41143 9.80367 11.3961 8.4126C12.3039 9.36533 13.5833 9.96094 15 9.96094ZM10.0243 5.1706C10.0479 5.79375 10.1855 6.38806 10.4185 6.93263C8.87924 7.69523 7.55637 8.82732 6.55647 10.2503C5.33379 11.9905 4.6875 14.0381 4.6875 16.1719C4.6875 21.8582 9.31365 26.4844 15 26.4844C20.6863 26.4844 25.3125 21.8582 25.3125 16.1719C25.3125 14.0381 24.6662 11.9904 23.4435 10.2503C22.4436 8.82732 21.1208 7.69517 19.5815 6.93264C19.8144 6.38806 19.9521 5.79375 19.9757 5.1706C24.2704 7.10355 27.0703 11.3657 27.0703 16.1719C27.0703 22.8275 21.6556 28.2422 15 28.2422C8.34439 28.2422 2.92969 22.8275 2.92969 16.1719C2.92969 11.3657 5.72959 7.10355 10.0243 5.1706Z" fill="#7B7B7B" />
+                        <path d="M5.22205 25.9498C7.83381 28.5616 11.3064 30 15 30C18.6936 30 22.1662 28.5616 24.7779 25.9498C27.3898 23.3381 28.8281 19.8655 28.8281 16.1719C28.8281 13.1798 27.8878 10.332 26.1088 7.9364C24.4542 5.7082 22.2194 4.05644 19.6257 3.13799C18.8916 1.30148 17.0955 -1.0257e-06 15 -1.20889e-06C12.9045 -1.39209e-06 11.1084 1.30148 10.3743 3.13799C7.78061 4.05644 5.54584 5.7082 3.89115 7.9364C2.11219 10.332 1.17188 13.1798 1.17188 16.1719C1.17188 19.8655 2.61023 23.3381 5.22205 25.9498ZM15 1.75781C16.777 1.75781 18.2227 3.2035 18.2227 4.98047C18.2227 6.75744 16.777 8.20312 15 8.20312C13.223 8.20312 11.7773 6.75744 11.7773 4.98047C11.7773 3.2035 13.223 1.75781 15 1.75781ZM15 9.96094C16.4167 9.96094 17.6962 9.36533 18.6039 8.4126C21.5886 9.80361 23.5547 12.847 23.5547 16.1719C23.5547 20.889 19.7171 24.7266 15 24.7266C10.2829 24.7266 6.44531 20.889 6.44531 16.1719C6.44531 12.8471 8.41143 9.80367 11.3961 8.4126C12.3039 9.36533 13.5833 9.96094 15 9.96094ZM17.5186 24.9085L20.8826 15.9378H25.3679L17.5186 24.9085ZM21.6957 14.1799L23.7892 9.99284L25.8828 14.1799H21.6957Z" fill="#7B7B7B" />
                     </g>
                     <defs>
                         <clipPath id="clip0_224_1779">
@@ -21,9 +58,9 @@
                     </defs>
                 </svg>
             </div>
-        </div>
+        </button>
         <!-- step 2 -->
-        <div class="py-4 px-6 rounded-xl bg-[#F7F5F5] flex items-center justify-between">
+        <button onclick="openTab(event, 'tab2')" class="tab-button focus:outline-none py-4 px-6 rounded-xl bg-transparent text-[#666666] flex items-center justify-between cursor-pointer transition-colors">
             <div class="flex items-center gap-4 text-black">
                 <span class="inline-block text-[40px] leading-[120%] font-bold text-[#000000]">2</span>
                 <div class="flex flex-col gap-1">
@@ -46,9 +83,9 @@
                     </defs>
                 </svg>
             </div>
-        </div>
+        </button>
         <!-- step 3 -->
-        <div class="py-4 px-6 rounded-xl bg-[#F7F5F5] flex items-center justify-between">
+        <div class="py-4 px-6 rounded-xl bg-white cursor-not-allowed flex items-center justify-between">
             <div class="flex items-center gap-4 text-black">
                 <span class="inline-block text-[40px] leading-[120%] font-bold text-[#000000]">3</span>
                 <div class="flex flex-col gap-1">
@@ -65,7 +102,9 @@
         </div>
     </div>
 </div>
-<div class="p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl">
+
+<!-- tab content for step 1 -->
+<div id="tab1" class="tab-content p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl hidden">
     <div class="grid grid-cols-12 gap-4">
         <div class="col-span-7">
             <div class="flex items-center justify-between mb-5">
@@ -218,6 +257,216 @@
             </div>
         </div>
         <div class="col-span-7 flex justify-end border-l">
+            <!-- Style Selection -->
+            <div class="">
+                <h3 class="text-xl font-bold text-[#000000] mb-6">Style</h3>
+                <div class="flex flex-wrap items-center gap-3">
+                    <!-- Solitaire -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="solitaire" class="hidden" onchange="updateStyleBorder(this)" checked>
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-black rounded-lg transition text-sm text-[#000000]" id="solitaire-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.11875 6.9375L9.10625 3H9.33125L11.3188 6.9375H7.11875ZM8.65625 15.825L2.1875 8.0625H8.65625V15.825ZM9.78125 15.825V8.0625H16.25L9.78125 15.825ZM12.5563 6.9375L10.6063 3H14.4688L16.4375 6.9375H12.5563ZM2 6.9375L3.96875 3H7.83125L5.88125 6.9375H2Z" fill="black" />
+                            </svg>
+                            <span>Solitaire</span>
+                        </div>
+                    </label>
+
+                    <!-- Halo -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="halo" class="hidden" onchange="updateStyleBorder(this)">
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="halo-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_224_1895)">
+                                    <path d="M9 0C4.02943 0 0 4.02943 0 9C0 13.9706 4.02943 18 9 18C13.9706 18 18 13.9706 18 9C18 4.02943 13.9706 0 9 0ZM9.05933 3.14868L10.4777 7.57726L15.126 7.68163L11.3522 10.3975L12.6892 14.8513L8.93958 12.1014L5.11743 14.7502L6.57421 10.3337L2.87401 7.51684L7.52453 7.53772L9.05933 3.14868Z" fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_224_1895">
+                                        <rect width="18" height="18" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Halo</span>
+                        </div>
+                    </label>
+
+                    <!-- Three Stone -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="three-stone" class="hidden" onchange="updateStyleBorder(this)">
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="three-stone-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 9C12 8.175 12.675 7.5 13.5 7.5C14.325 7.5 15 8.175 15 9C15 9.825 14.325 10.5 13.5 10.5C12.675 10.5 12 9.825 12 9ZM7.5 9C7.5 8.175 8.175 7.5 9 7.5C9.825 7.5 10.5 8.175 10.5 9C10.5 9.825 9.825 10.5 9 10.5C8.175 10.5 7.5 9.825 7.5 9ZM3 9C3 8.175 3.675 7.5 4.5 7.5C5.325 7.5 6 8.175 6 9C6 9.825 5.325 10.5 4.5 10.5C3.675 10.5 3 9.825 3 9ZM9.75 13.5C9.75 12.675 10.425 12 11.25 12C12.075 12 12.75 12.675 12.75 13.5C12.75 14.325 12.075 15 11.25 15C10.425 15 9.75 14.325 9.75 13.5ZM5.25 13.5C5.25 12.675 5.925 12 6.75 12C7.575 12 8.25 12.675 8.25 13.5C8.25 14.325 7.575 15 6.75 15C5.925 15 5.25 14.325 5.25 13.5ZM9.75 4.5C9.75 3.675 10.425 3 11.25 3C12.075 3 12.75 3.675 12.75 4.5C12.75 5.325 12.075 6 11.25 6C10.425 6 9.75 5.325 9.75 4.5ZM5.25 4.5C5.25 3.675 5.925 3 6.75 3C7.575 3 8.25 3.675 8.25 4.5C8.25 5.325 7.575 6 6.75 6C5.925 6 5.25 5.325 5.25 4.5Z" fill="black" />
+                            </svg>
+                            <span>Three Stone</span>
+                        </div>
+                    </label>
+
+                    <!-- Nature -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="style" value="nature" class="hidden" onchange="updateStyleBorder(this)">
+                        <div class="flex items-center gap-2 px-4 py-2 border-2 border-[#E8E8E8] rounded-lg transition text-sm text-[#000000]" id="nature-style">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 9L6.75 1.5L1.5 9H2.895L0 13.5H5.25V16.5H8.25V13.5H13.5L10.605 9H12ZM15.105 9H16.5L11.25 1.5L9.4575 4.0575L13.44 9.75H11.9775L14.3925 13.5H18L15.105 9ZM9.75 14.25H12.75V16.5H9.75V14.25Z" fill="black" />
+                            </svg>
+                            <span>Nature</span>
+                        </div>
+                    </label>
+
+                    <script>
+                        function updateStyleBorder(radio) {
+                            // Reset all style borders to gray
+                            document.querySelectorAll('[id$="-style"]').forEach(div => {
+                                div.classList.remove('border-black');
+                                div.classList.add('border-[#E8E8E8]');
+                            });
+
+                            // Set the selected border to black
+                            const selectedStyle = document.getElementById(radio.value + '-style');
+                            if (selectedStyle) {
+                                selectedStyle.classList.remove('border-[#E8E8E8]');
+                                selectedStyle.classList.add('border-black');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- tab content for step 2 -->
+<div id="tab2" class="tab-content p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl hidden">
+    <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-7">
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="text-xl font-bold text-[#000000]">Shape</h2>
+                <button class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2">
+                    <span class="mr-2">More Shapes</span>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#737373" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="grid grid-cols-6 gap-4 text-black">
+                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                    <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
+                    <h2>Round</h2>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                    <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
+                    <h2>Round</h2>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                    <img src="/assets/images/shapes/oval.png" alt="Round" class="size-16 object-cover">
+                    <h2>Oval</h2>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                    <img src="/assets/images/shapes/cushion.png" alt="Round" class="size-16 object-cover">
+                    <h2>Cushion</h2>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                    <img src="/assets/images/shapes/princess.png" alt="Round" class="size-16 object-cover">
+                    <h2>Princess</h2>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                    <img src="/assets/images/shapes/radiant.png" alt="Round" class="size-16 object-cover">
+                    <h2>Radiant</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-5">
+            <!-- CARAT SLIDER -->
+            <div class="mb-0">
+                <h2 class="text-xl font-bold text-[#000000]">Carat</h2>
+                <div class="flex flex-col gap-2">
+                    <div class="relative h-8 flex items-center">
+                        <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
+                        <div id="caratSliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                        <input id="caratMin" type="range" min="0.15" max="35" value="0.15" step="0.01"
+                            class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 2;" />
+                        <input id="caratMax" type="range" min="0.15" max="35" value="35" step="0.01"
+                            class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 1;" />
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="text" readonly id="caratMinInput" value="0.15" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                        <span class="text-xl text-[#bbbbbb]">—</span>
+                        <input type="text" readonly id="caratMaxInput" value="24" class="w-full grow px-4 py-1.5 bg-white border border-[#E8E8E8] rounded focus:outline-none text-[#bbbbbb]" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 col-span-full">
+        <div class="col-span-6">
+            <!-- Metal Selection -->
+            <div class="">
+                <h3 class="text-xl font-bold text-[#000000] mb-6">Metal</h3>
+                <div class="flex items-center gap-6 text-black">
+                    <!-- 18K Yellow -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="yellow" class="hidden" onchange="updateMetalBorder(this)" checked>
+                        <div class="flex flex-col items-center">
+                            <div id="yellow-border" class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#FFD700]"></div>
+                            </div>
+                            <span class="text-sm font-medium">18K Yellow</span>
+                        </div>
+                    </label>
+
+                    <!-- 18K White -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="white" class="hidden" onchange="updateMetalBorder(this)">
+                        <div class="flex flex-col items-center">
+                            <div id="white-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#F5F5F5]"></div>
+                            </div>
+                            <span class="text-sm font-medium">18K White</span>
+                        </div>
+                    </label>
+
+                    <!-- 14K Rose -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="rose" class="hidden" onchange="updateMetalBorder(this)">
+                        <div class="flex flex-col items-center">
+                            <div id="rose-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#E0BFB8]"></div>
+                            </div>
+                            <span class="text-sm font-medium">14K Rose</span>
+                        </div>
+                    </label>
+
+                    <!-- Platinum -->
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="metal" value="platinum" class="hidden" onchange="updateMetalBorder(this)">
+                        <div class="flex flex-col items-center">
+                            <div id="platinum-border" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div class="w-10 h-10 rounded-full bg-[#E5E4E2]"></div>
+                            </div>
+                            <span class="text-sm font-medium">Platinum</span>
+                        </div>
+                    </label>
+
+                    <script>
+                        function updateMetalBorder(radio) {
+                            // Reset all borders to gray
+                            document.querySelectorAll('[id$="-border"]').forEach(div => {
+                                div.classList.remove('border-black');
+                                div.classList.add('border-[#E8E8E8]');
+                            });
+
+                            // Set the selected border to black
+                            const selectedBorder = document.getElementById(radio.value + '-border');
+                            if (selectedBorder) {
+                                selectedBorder.classList.remove('border-[#E8E8E8]');
+                                selectedBorder.classList.add('border-black');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-6 flex justify-end border-l">
             <!-- Style Selection -->
             <div class="">
                 <h3 class="text-xl font-bold text-[#000000] mb-6">Style</h3>
