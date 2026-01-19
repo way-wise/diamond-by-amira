@@ -332,24 +332,33 @@
                 </div>
             </div>
         </div>
-        <hr class="my-6 col-span-full">
-        <div class="col-span-6">
+        <hr class="my-6 col-span-full ">
+        <div class="col-span-6 pr-12">
             <!-- Color Selection -->
-            <div class="mb-6">
-                <div class="flex items-center justify-between mb-4">
+            <div class="mb-2">
+                <div class="flex items-center justify-between mb-2">
                     <h3 class="text-xl font-bold text-black">Color</h3>
                     <!-- Color tabs -->
                     <div class="flex gap-2">
-                        <button type="button" onclick="openColorTab(event, 'white')" class="color-tab active px-4 py-2 rounded-md bg-black text-white text-sm">White</button>
-                        <button type="button" onclick="openColorTab(event, 'fancy')" class="color-tab px-4 py-2 rounded-md border border-[#E8E8E8] text-black text-sm">Fancy</button>
+                        <button type="button" onclick="openColorTab(event, 'white')" class="color-tab active px-4 py-1 rounded-md bg-black text-white text-xs">White</button>
+                        <button type="button" onclick="openColorTab(event, 'fancy')" class="color-tab px-4 py-1 rounded-md border border-[#E8E8E8] text-black text-xs">Fancy</button>
                     </div>
                 </div>
 
                 <!-- White Color Tab Content -->
                 <div id="white-content" class="color-tab-content">
-                    <div class="relative">
-                        <input type="range" min="0" max="6" value="6" step="1" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer">
-                        <div class="flex justify-between text-sm text-black mt-2 px-1">
+                    <div class="flex flex-col gap-2">
+                        <div class="relative h-8 flex items-center">
+                            <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
+                            <div id="colorSliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                            <input id="colorMin" type="range" min="0" max="6" value="0" step="1"
+                                class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
+                                style="top: 50%; margin-top: -8px; z-index: 2;" />
+                            <input id="colorMax" type="range" min="0" max="6" value="6" step="1"
+                                class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
+                                style="top: 50%; margin-top: -8px; z-index: 1;" />
+                        </div>
+                        <div class="flex justify-between text-sm text-black px-1">
                             <span>J</span>
                             <span>I</span>
                             <span>H</span>
@@ -364,34 +373,64 @@
                 <!-- Fancy Color Tab Content -->
                 <div id="fancy-content" class="color-tab-content hidden">
                     <div class="grid grid-cols-6 gap-2">
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Yellow</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Pink</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Blue</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Red</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Green</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Purple</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Orange</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Violet</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Gray</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Black</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Brown</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Champagne</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Cognac</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Chameleon</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">White</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">S & P</button>
-                        <button class="px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Other</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Yellow</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Pink</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Blue</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Red</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Green</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Purple</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Orange</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Violet</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Gray</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Black</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Brown</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Champagne</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Cognac</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Chameleon</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">White</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">S & P</button>
+                        <button onclick="toggleFancyColor(this)" class="fancy-color-btn px-3 py-2 border border-[#D7D7D7] rounded-md text-xs text-black hover:border-black transition">Other</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Cut Slider -->
+            <div class="mb-2">
+                <h3 class="text-xl font-bold text-black mb-2">Cut</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="relative h-8 flex items-center">
+                        <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
+                        <div id="cutSliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                        <input id="cutMin" type="range" min="0" max="2" value="0" step="1"
+                            class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 2;" />
+                        <input id="cutMax" type="range" min="0" max="2" value="2" step="1"
+                            class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 1;" />
+                    </div>
+                    <div class="flex justify-between text-sm text-black px-1">
+                        <span>Very Good</span>
+                        <span>Excellent</span>
+                        <span>Ideal</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-6 pl-12 border-l border-[#E8E8E8]">
             <!-- Clarity Slider -->
-            <div class="mb-6">
-                <h3 class="text-xl font-bold text-black mb-4">Clarity</h3>
-                <div class="relative">
-                    <input type="range" min="0" max="10" value="0" step="1" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer">
-                    <div class="flex justify-between text-xs text-black mt-2 px-1">
+            <div class="mb-2">
+                <h3 class="text-xl font-bold text-black mb-2">Clarity</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="relative h-8 flex items-center">
+                        <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
+                        <div id="claritySliderTrack" class="absolute h-[3px] bg-black rounded-full" style="left: 0%; right: 0%; top: 50%; margin-top: -1.5px;"></div>
+                        <input id="clarityMin" type="range" min="0" max="10" value="0" step="1"
+                            class="range-min absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 2;" />
+                        <input id="clarityMax" type="range" min="0" max="10" value="10" step="1"
+                            class="range-max absolute w-full bg-transparent appearance-none pointer-events-auto"
+                            style="top: 50%; margin-top: -8px; z-index: 1;" />
+                    </div>
+                    <div class="flex justify-between text-xs text-black px-1">
                         <span>I3</span>
                         <span>I2</span>
                         <span>I1</span>
@@ -406,25 +445,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-span-6">
-            <!-- Cut Slider -->
-            <div class="mb-6">
-                <h3 class="text-xl font-bold text-black mb-4">Cut</h3>
-                <div class="relative">
-                    <input type="range" min="0" max="2" value="0" step="1" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer">
-                    <div class="flex justify-between text-sm text-black mt-2 px-1">
-                        <span>Very Good</span>
-                        <span>Excellent</span>
-                        <span>Ideal</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-span-6">
             <!-- Price Slider -->
             <div class="mb-6">
-                <h3 class="text-xl font-bold text-black mb-4">Price</h3>
+                <h3 class="text-xl font-bold text-black mb-2">Price</h3>
                 <div class="flex flex-col gap-2">
                     <div class="relative h-8 flex items-center">
                         <div class="absolute left-0 right-0 h-[3px] bg-[#E8E8E8] rounded-full" style="top: 50%; margin-top: -1.5px;"></div>
@@ -444,7 +467,6 @@
                 </div>
             </div>
         </div>
-        <hr class="my-6 col-span-full">
     </div>
 </div>
 

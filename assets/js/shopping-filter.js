@@ -58,11 +58,75 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initCaratSliders() {
-    // Initialize all range sliders (price, carat, carat2, price2)
+    // Initialize all dual-handle range sliders
     initRangeSlider('price', 'priceMin', 'priceMax', 'priceMinInput', 'priceMaxInput', 'priceSliderTrack');
     initRangeSlider('carat', 'caratMin', 'caratMax', 'caratMinInput', 'caratMaxInput', 'caratSliderTrack');
     initRangeSlider('carat2', 'caratMin2', 'caratMax2', 'caratMinInput2', 'caratMaxInput2', 'caratSliderTrack2');
     initRangeSlider('price2', 'priceMin2', 'priceMax2', 'priceMinInput2', 'priceMaxInput2', 'priceSliderTrack2');
+    
+    // Initialize Color, Clarity, and Cut as dual-handle sliders (no input fields)
+    initRangeSliderNoInput('color', 'colorMin', 'colorMax', 'colorSliderTrack');
+    initRangeSliderNoInput('clarity', 'clarityMin', 'clarityMax', 'claritySliderTrack');
+    initRangeSliderNoInput('cut', 'cutMin', 'cutMax', 'cutSliderTrack');
+}
+
+function initRangeSliderNoInput(name, minId, maxId, trackId) {
+    const minSlider = document.getElementById(minId);
+    const maxSlider = document.getElementById(maxId);
+    const track = document.getElementById(trackId);
+    
+    if (!minSlider || !maxSlider) return;
+    
+    console.log(`Initializing ${name} slider...`);
+    
+    // Update track when sliders change
+    minSlider.addEventListener('input', function() {
+        updateSliderTrack(minSlider, maxSlider, track);
+    });
+    
+    maxSlider.addEventListener('input', function() {
+        updateSliderTrack(minSlider, maxSlider, track);
+    });
+    
+    // Make track clickable
+    if (track && track.parentElement) {
+        const container = track.parentElement;
+        container.addEventListener('click', function(e) {
+            const rect = container.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const percentage = clickX / rect.width;
+            const min = parseFloat(minSlider.min);
+            const max = parseFloat(minSlider.max);
+            const value = min + (percentage * (max - min));
+            
+            // Determine which slider to update based on proximity
+            const minVal = parseFloat(minSlider.value);
+            const maxVal = parseFloat(maxSlider.value);
+            const midPoint = (minVal + maxVal) / 2;
+            
+            if (value < midPoint) {
+                minSlider.value = Math.round(value);
+                minSlider.dispatchEvent(new Event('input'));
+            } else {
+                maxSlider.value = Math.round(value);
+                maxSlider.dispatchEvent(new Event('input'));
+            }
+        });
+    }
+    
+    // Initial track update
+    updateSliderTrack(minSlider, maxSlider, track);
+}
+
+function toggleFancyColor(button) {
+    // Toggle selected state
+    if (button.classList.contains('bg-black')) {
+        button.classList.remove('bg-black', 'text-white', 'border-black');
+        button.classList.add('border-[#D7D7D7]', 'text-black');
+    } else {
+        button.classList.remove('border-[#D7D7D7]');
+        button.classList.add('bg-black', 'text-white', 'border-black');
+    }
 }
 
 function initRangeSlider(name, minId, maxId, minInputId, maxInputId, trackId) {
