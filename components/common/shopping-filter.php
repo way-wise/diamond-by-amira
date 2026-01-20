@@ -464,6 +464,3 @@
         </div>
     </div>
 </div>
-
-<!-- Include external JavaScript at the end of the body with defer to ensure DOM is ready -->
-<script src="/assets/js/shopping-filter.js" defer></script>

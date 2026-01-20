@@ -81,14 +81,6 @@ $showPageTitle = $showPageTitle ?? true;
 
     <!-- Main Content -->
     <main class="flex-grow">
-        <?php if ($showPageTitle && isset($pageTitle)): ?>
-            <div class="bg-white shadow-sm border-b">
-                <div class="max-w-[1252px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                    <h1 class="text-3xl font-bold text-gray-900"><?php echo htmlspecialchars($pageTitle); ?></h1>
-                </div>
-            </div>
-        <?php endif; ?>
-
         <?php
         // Content will be included here by the page file
         if (isset($content)) {
@@ -104,6 +96,7 @@ $showPageTitle = $showPageTitle ?? true;
 
     <!-- Main JavaScript -->
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/shopping-filter.js"></script>
 
     </body>
 </html>

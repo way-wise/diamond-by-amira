@@ -6,6 +6,9 @@ ob_start();
 <!-- Hero Section -->
 <?php include __DIR__ . '/components/hero.php'; ?>
 
+<!-- Shop Categories -->
+<?php include __DIR__ . '/components/shop-categories-section.php'; ?>
+
 <!-- Browse Jewelry by Category -->
 <?php include __DIR__ . '/components/category-section.php'; ?>
 
