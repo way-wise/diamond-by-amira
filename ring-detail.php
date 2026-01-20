@@ -337,23 +337,6 @@ ob_start();
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="py-16 md:py-20 bg-black text-white">
-    <div class="container-wrapper text-center">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Your Perfect Diamond Awaits</h2>
-        <p class="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
-            Whether you're choosing a certified loose diamond or a timeless piece of jewellery, 
-            find exceptional brilliance, trusted quality, and unfathomable deals in our forever.
-        </p>
-        <button class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2">
-            Explore the Collection
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-    </div>
-</section>
-
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
