@@ -190,8 +190,8 @@
     </div>
 
     <!-- Static HTML Mega Menus - Easy to customize -->
-    <?php include __DIR__ . '/../mega-menu/fine-jewelry.html'; ?>
-    <?php include __DIR__ . '/../mega-menu/bridal.html'; ?>
+    <?php include __DIR__ . '/../mega-menu/fine-jewelry.php'; ?>
+    <?php include __DIR__ . '/../mega-menu/bridal.php'; ?>
 
     <!-- Simple Dropdown Menus for Watches and Brands -->
     <div class="simple-dropdown hidden absolute bg-white shadow-lg rounded-lg py-2 min-w-[200px] z-[90]" data-dropdown="Watches" style="top: 80px;">
