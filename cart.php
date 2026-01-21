@@ -42,6 +42,7 @@ $recommendedProducts = [
         'rating' => 5,
         'reviews' => 16,
         'image' => '/assets/images/products/product-01.png',
+        'hoverImage' => '/assets/images/products/product-02.png',
         'url' => '#'
     ],
     [
@@ -52,6 +53,7 @@ $recommendedProducts = [
         'rating' => 5,
         'reviews' => 24,
         'image' => '/assets/images/products/product-02.png',
+        'hoverImage' => '/assets/images/products/product-03.png',
         'url' => '#'
     ],
     [
@@ -62,6 +64,7 @@ $recommendedProducts = [
         'rating' => 5,
         'reviews' => 16,
         'image' => '/assets/images/products/product-03.png',
+        'hoverImage' => '/assets/images/products/product-04.png',
         'url' => '#'
     ],
     [
@@ -72,6 +75,7 @@ $recommendedProducts = [
         'rating' => 5,
         'reviews' => 24,
         'image' => '/assets/images/products/product-04.png',
+        'hoverImage' => '/assets/images/products/product-05.png',
         'url' => '#'
     ]
 ];
@@ -259,7 +263,12 @@ ob_start();
                 <div class="bg-[#F7F5F5] overflow-hidden aspect-square relative">
                     <img src="<?php echo htmlspecialchars($product['image']); ?>" 
                          alt="<?php echo htmlspecialchars($product['name']); ?>" 
-                         class="size-full object-cover transition-transform duration-300 group-hover:scale-105">
+                         class="size-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105">
+                    <?php if (isset($product['hoverImage'])): ?>
+                    <img src="<?php echo htmlspecialchars($product['hoverImage']); ?>" 
+                         alt="<?php echo htmlspecialchars($product['name']); ?>" 
+                         class="size-full object-cover absolute inset-0 opacity-0 scale-95 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-100">
+                    <?php endif; ?>
                 </div>
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm"><?php echo htmlspecialchars($product['category']); ?></p>

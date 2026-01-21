@@ -10,7 +10,7 @@ $products = [
         'originalPrice' => 2599.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-01.png',
-        'hoverImage' => '/assets/images/products/product-02.png',
+        'hoverImage' => '/assets/images/categories/category-01.png',
         'url' => '#'
     ],
     [
@@ -20,7 +20,7 @@ $products = [
         'originalPrice' => 2650.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-02.png',
-        'hoverImage' => '/assets/images/products/product-03.png',
+        'hoverImage' => '/assets/images/categories/category-02.png',
         'url' => '#'
     ],
     [
@@ -30,7 +30,7 @@ $products = [
         'originalPrice' => 2750.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-03.png',
-        'hoverImage' => '/assets/images/products/product-04.png',
+        'hoverImage' => '/assets/images/categories/category-03.png',
         'url' => '#'
     ],
     [
@@ -40,7 +40,7 @@ $products = [
         'originalPrice' => 2550.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-04.png',
-        'hoverImage' => '/assets/images/products/product-05.png',
+        'hoverImage' => '/assets/images/categories/category-04.png',
         'url' => '#'
     ],
     [
@@ -50,7 +50,7 @@ $products = [
         'originalPrice' => 2600.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-05.png',
-        'hoverImage' => '/assets/images/products/product-06.png',
+        'hoverImage' => '/assets/images/categories/category-05.png',
         'url' => '#'
     ],
     [
@@ -60,7 +60,7 @@ $products = [
         'originalPrice' => 2650.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-06.png',
-        'hoverImage' => '/assets/images/products/product-07.png',
+        'hoverImage' => '/assets/images/categories/category-06.png',
         'url' => '#'
     ],
     [
@@ -70,7 +70,7 @@ $products = [
         'originalPrice' => 2750.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-07.png',
-        'hoverImage' => '/assets/images/products/product-08.png',
+        'hoverImage' => '/assets/images/categories/category-01.png',
         'url' => '#'
     ],
     [
@@ -80,7 +80,7 @@ $products = [
         'originalPrice' => 2550.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-08.png',
-        'hoverImage' => '/assets/images/products/product-01.png',
+        'hoverImage' => '/assets/images/categories/category-02.png',
         'url' => '#'
     ],
     [
@@ -90,7 +90,7 @@ $products = [
         'originalPrice' => 2599.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-01.png',
-        'hoverImage' => '/assets/images/products/product-02.png',
+        'hoverImage' => '/assets/images/categories/category-03.png',
         'url' => '#'
     ],
     [
@@ -100,7 +100,7 @@ $products = [
         'originalPrice' => 2650.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-02.png',
-        'hoverImage' => '/assets/images/products/product-03.png',
+        'hoverImage' => '/assets/images/categories/category-04.png',
         'url' => '#'
     ],
     [
@@ -110,7 +110,7 @@ $products = [
         'originalPrice' => 2750.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-03.png',
-        'hoverImage' => '/assets/images/products/product-04.png',
+        'hoverImage' => '/assets/images/categories/category-05.png',
         'url' => '#'
     ],
     [
@@ -120,7 +120,7 @@ $products = [
         'originalPrice' => 2550.00,
         'rating' => 5,
         'image' => '/assets/images/products/product-04.png',
-        'hoverImage' => '/assets/images/products/product-05.png',
+        'hoverImage' => '/assets/images/categories/category-06.png',
         'url' => '#'
     ],
     [

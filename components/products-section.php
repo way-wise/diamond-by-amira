@@ -8,7 +8,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-01.png',
-        'hoverImage' => '/assets/images/products/product-01-hover.png',
+        'hoverImage' => '/assets/images/categories/category-01.png',
         'url' => '#'
     ],
     [
@@ -19,6 +19,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-02.png',
+        'hoverImage' => '/assets/images/categories/category-02.png',
         'url' => '#'
     ],
     [
@@ -29,6 +30,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-03.png',
+        'hoverImage' => '/assets/images/categories/category-03.png',
         'url' => '#'
     ],
     [
@@ -39,6 +41,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-04.png',
+        'hoverImage' => '/assets/images/categories/category-04.png',
         'url' => '#'
     ],
     [
@@ -49,6 +52,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-05.png',
+        'hoverImage' => '/assets/images/categories/category-05.png',
         'url' => '#'
     ],
     [
@@ -59,6 +63,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-06.png',
+        'hoverImage' => '/assets/images/categories/category-06.png',
         'url' => '#'
     ],
     [
@@ -69,6 +74,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-07.png',
+        'hoverImage' => '/assets/images/categories/category-01.png',
         'url' => '#'
     ],
     [
@@ -79,6 +85,7 @@ $products = [
         'rating' => 5,
         'ratingCount' => 100,
         'image' => '/assets/images/products/product-08.png',
+        'hoverImage' => '/assets/images/categories/category-01.png',
         'url' => '#'
     ]
 ];
@@ -110,14 +117,14 @@ $products = [
                 <a href="<?php echo htmlspecialchars($product['url']); ?>"
                     class="group border border-[#E5E5E5]">
                     <div class="bg-gray-100 overflow-hidden aspect-square relative">
-                        <?php if (isset($product['image']) && file_exists(__DIR__ . '/..' . $product['image'])): ?>
+                        <?php if (isset($product['image'])): ?>
                             <img src="<?php echo htmlspecialchars($product['image']); ?>"
                                 alt="<?php echo htmlspecialchars($product['name']); ?>"
-                                class="size-full object-cover transition-all duration-500 <?php echo isset($product['hoverImage']) ? 'group-hover:opacity-0' : 'group-hover:scale-110'; ?>">
+                                class="size-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105">
                             <?php if (isset($product['hoverImage'])): ?>
                                 <img src="<?php echo htmlspecialchars($product['hoverImage']); ?>"
                                     alt="<?php echo htmlspecialchars($product['name']); ?>"
-                                    class="size-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    class="size-full object-cover absolute inset-0 opacity-0 scale-95 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-100">
                             <?php endif; ?>
                         <?php else: ?>
                             <div class="size-full flex items-center justify-center bg-gray-200">
