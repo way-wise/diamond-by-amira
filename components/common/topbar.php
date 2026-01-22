@@ -1,4 +1,4 @@
-<div class="bg-gray-800 text-white text-xs py-2.5">
+<div class="bg-black text-white text-xs py-2.5">
     <div class="container-wrapper">
         <div class="flex justify-between items-center">
             <!-- Left side - Links -->
