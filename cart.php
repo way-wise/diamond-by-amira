@@ -277,9 +277,8 @@ ob_start();
                     </h3>
                     <div class="flex items-center gap-1">
                         <?php for ($i = 0; $i < 5; $i++): ?>
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 1L8.854 5.146L13 6.708L9.5 9.854L10.708 14L7 11.646L3.292 14L4.5 9.854L1 6.708L5.146 5.146L7 1Z" 
-                                  fill="<?php echo $i < $product['rating'] ? '#FFD700' : '#E5E5E5'; ?>"/>
+                        <svg class="w-4 h-4 <?php echo $i < $product['rating'] ? 'text-yellow-400' : 'text-gray-300'; ?> fill-current" viewBox="0 0 20 20">
+                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                         </svg>
                         <?php endfor; ?>
                         <span class="text-xs text-[#666666] ml-1">(<?php echo $product['reviews']; ?>)</span>

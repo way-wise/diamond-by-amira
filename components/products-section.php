@@ -140,11 +140,12 @@ $products = [
                             <?php echo htmlspecialchars($product['name']); ?>
                         </h3>
                         <div class="flex items-center gap-1">
-                            <?php for ($i = 0; $i < $product['rating']; $i++): ?>
-                                <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                            <?php for ($i = 0; $i < 5; $i++): ?>
+                                <svg class="w-4 h-4 <?php echo $i < $product['rating'] ? 'text-yellow-400' : 'text-gray-300'; ?> fill-current" viewBox="0 0 20 20">
                                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                                 </svg>
                             <?php endfor; ?>
+                            <span class="text-xs text-[#666666] ml-1">(<?php echo $product['ratingCount']; ?>)</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="text-base font-bold text-gray-900">

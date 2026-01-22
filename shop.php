@@ -257,6 +257,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,449.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,599.00</span>
@@ -273,6 +281,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Graceful Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,499.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,650.00</span>
@@ -289,6 +305,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Radiant Halo Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,599.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,750.00</span>
@@ -305,6 +329,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Art Deco Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,399.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,550.00</span>
@@ -321,6 +353,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste 3D Cluster 14 White Gold Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,449.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,600.00</span>
@@ -337,6 +377,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Graceful Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,499.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,650.00</span>
@@ -353,6 +401,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Radiant Halo Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,599.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,750.00</span>
@@ -369,6 +425,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Art Deco Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,399.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,550.00</span>
@@ -385,6 +449,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,449.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,599.00</span>
@@ -401,6 +473,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Graceful Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,499.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,650.00</span>
@@ -417,6 +497,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Radiant Halo Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,599.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,750.00</span>
@@ -433,6 +521,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Art Deco Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,399.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,550.00</span>
@@ -449,6 +545,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste 3D Cluster 14 White Gold Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,449.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,600.00</span>
@@ -465,6 +569,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Graceful Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,499.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,650.00</span>
@@ -481,6 +593,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Radiant Halo Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,599.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,750.00</span>
@@ -497,6 +617,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Art Deco Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,399.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,550.00</span>
@@ -513,6 +641,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,449.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,599.00</span>
@@ -529,6 +665,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Graceful Brilliance Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,499.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,650.00</span>
@@ -545,6 +689,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Radiant Halo Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,599.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,750.00</span>
@@ -561,6 +713,14 @@ ob_start();
                 <div class="p-3 md:p-4 space-y-2">
                     <p class="text-[#666666] text-xs md:text-sm">Diamond Ring</p>
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">Celeste Art Deco Solitaire Ring</h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$2,399.00</span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$2,550.00</span>

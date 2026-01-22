@@ -292,6 +292,14 @@ ob_start();
                     <h3 class="text-sm md:text-base font-semibold text-black line-clamp-2 group-hover:text-gray-600 transition-colors leading-snug">
                         <?php echo $product['name']; ?>
                     </h3>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <span class="text-xs text-[#666666] ml-1">(24)</span>
+                    </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-base md:text-lg font-bold text-black">$<?php echo number_format($product['price'], 2); ?></span>
                         <span class="text-xs md:text-sm text-[#999999] line-through">$<?php echo number_format($product['originalPrice'], 2); ?></span>
