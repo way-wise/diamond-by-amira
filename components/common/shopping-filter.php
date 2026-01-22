@@ -68,7 +68,7 @@
 </div>
 
 <!-- tab content for step 1 -->
-<div id="tab1" class="tab-content p-4 md:p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl">
+<div id="tab1" class="tab-content block p-4 md:p-10 mt-6 bg-white border border-[#D7D7D7] rounded-2xl">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div class="lg:col-span-7">
             <div class="flex items-center justify-between mb-5">

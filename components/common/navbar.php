@@ -30,7 +30,7 @@
             <!-- Center - Logo -->
             <div class="flex-1 flex lg:justify-center">
                 <a href="/" class="text-2xl font-bold text-gray-900 tracking-wide hover:text-gray-700 transition-colors">
-                    <img src="/assets/images/logo.png" alt="Logo" class="h-12 w-auto">
+                    <img src="/assets/images/logo.png" alt="Logo" class="md:h-12 h-6 w-auto">
                 </a>
             </div>
 

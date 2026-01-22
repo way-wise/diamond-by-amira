@@ -236,21 +236,22 @@ function openTab(evt, tabName) {
     const tabContents = document.querySelectorAll('.tab-content');
     
     // Hide all tab contents and remove active classes
-    tabContents.forEach(content => content.classList.add('hidden'));
+    tabContents.forEach(content => {
+        content.classList.add('hidden');
+        content.classList.remove('block');
+    });
     tabButtons.forEach(button => {
         button.classList.remove('active', 'bg-[#F7F5F5]', 'text-black');
         button.classList.add('bg-transparent', 'text-[#666666]');
         
-        // Hide number and text on mobile for inactive tabs
+        // Hide number and text on mobile only for inactive tabs (keep visible on desktop)
         const tabNumber = button.querySelector('.tab-number');
         const tabText = button.querySelector('.tab-text');
         if (tabNumber) {
-            tabNumber.classList.add('hidden');
-            tabNumber.classList.remove('md:inline-block');
+            tabNumber.classList.add('hidden', 'md:inline-block');
         }
         if (tabText) {
-            tabText.classList.add('hidden');
-            tabText.classList.remove('md:flex');
+            tabText.classList.add('hidden', 'md:flex');
         }
     });
     
@@ -258,6 +259,7 @@ function openTab(evt, tabName) {
     const targetTab = document.getElementById(tabName);
     if (targetTab) {
         targetTab.classList.remove('hidden');
+        targetTab.classList.add('block');
     }
     
     // Update active state of clicked button
@@ -266,7 +268,7 @@ function openTab(evt, tabName) {
         clickedButton.classList.add('active', 'bg-[#F7F5F5]', 'text-black');
         clickedButton.classList.remove('bg-transparent', 'text-[#666666]');
         
-        // Show number and text for active tab on mobile
+        // Show number and text for active tab on both mobile and desktop
         const activeTabNumber = clickedButton.querySelector('.tab-number');
         const activeTabText = clickedButton.querySelector('.tab-text');
         if (activeTabNumber) {
@@ -275,7 +277,7 @@ function openTab(evt, tabName) {
         }
         if (activeTabText) {
             activeTabText.classList.remove('hidden');
-            activeTabText.classList.add('flex', 'md:flex');
+            activeTabText.classList.add('flex');
         }
     }
 }
