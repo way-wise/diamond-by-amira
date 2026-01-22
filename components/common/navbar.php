@@ -1,6 +1,3 @@
-<?php
-
-?>
 <nav class="bg-white shadow-sm sticky top-0 z-[100] relative">
     <div class="container-wrapper">
         <div class="flex justify-between items-center h-20">
