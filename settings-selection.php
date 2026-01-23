@@ -167,28 +167,28 @@ ob_start();
                         </button>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="flex flex-col items-center gap-2 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="round" onclick="selectShape(this)">
                             <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
                             <h2>Round</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="round-2" onclick="selectShape(this)">
                             <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
                             <h2>Round</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                            <img src="/assets/images/shapes/oval.png" alt="Round" class="size-16 object-cover">
+                        <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="oval" onclick="selectShape(this)">
+                            <img src="/assets/images/shapes/oval.png" alt="Oval" class="size-16 object-cover">
                             <h2>Oval</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                            <img src="/assets/images/shapes/cushion.png" alt="Round" class="size-16 object-cover">
+                        <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="cushion" onclick="selectShape(this)">
+                            <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="size-16 object-cover">
                             <h2>Cushion</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                            <img src="/assets/images/shapes/princess.png" alt="Round" class="size-16 object-cover">
+                        <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="princess" onclick="selectShape(this)">
+                            <img src="/assets/images/shapes/princess.png" alt="Princess" class="size-16 object-cover">
                             <h2>Princess</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                            <img src="/assets/images/shapes/radiant.png" alt="Round" class="size-16 object-cover">
+                        <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="radiant" onclick="selectShape(this)">
+                            <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="size-16 object-cover">
                             <h2>Radiant</h2>
                         </div>
                     </div>
@@ -419,6 +419,50 @@ ob_start();
         </div>
     </div>
 </section>
+
+<script>
+function selectShape(element) {
+    document.querySelectorAll('.shape-option').forEach(option => {
+        option.classList.remove('border-black');
+        option.classList.add('border-[#D7D7D7]');
+    });
+    
+    element.classList.remove('border-[#D7D7D7]');
+    element.classList.add('border-black');
+}
+
+function updateMetalBorder(input) {
+    document.querySelectorAll('input[name="metal"]').forEach(radio => {
+        const value = radio.value;
+        const border = document.getElementById(value + '-border');
+        if (border) {
+            if (radio.checked) {
+                border.classList.remove('border-[#E8E8E8]');
+                border.classList.add('border-black');
+            } else {
+                border.classList.remove('border-black');
+                border.classList.add('border-[#E8E8E8]');
+            }
+        }
+    });
+}
+
+function updateStyleBorder(input) {
+    document.querySelectorAll('input[name="style"]').forEach(radio => {
+        const value = radio.value;
+        const styleDiv = document.getElementById(value + '-style');
+        if (styleDiv) {
+            if (radio.checked) {
+                styleDiv.classList.remove('border-[#E8E8E8]');
+                styleDiv.classList.add('border-black');
+            } else {
+                styleDiv.classList.remove('border-black');
+                styleDiv.classList.add('border-[#E8E8E8]');
+            }
+        }
+    });
+}
+</script>
 
 <?php
 $content = ob_get_clean();

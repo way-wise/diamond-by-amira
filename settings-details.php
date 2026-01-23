@@ -157,8 +157,8 @@ ob_start();
                 <h1 class="text-2xl md:text-3xl font-bold text-black mb-4">Solitaire ring 1</h1>
 
                 <!-- Price -->
-                <div class="mb-6">
-                    <div class="text-xs text-[#666666] mb-2">Price Only for Setting</div>
+                <div class="border-t border-b border-[#D7D7D7] py-5 mb-5 flex justify-between items-center">
+                    <div class="text-xs text-[#666666]">Price Only for Setting</div>
                     <div class="flex items-center gap-3">
                         <span class="text-3xl font-bold text-black">$2,499.00</span>
                         <span class="text-xl text-[#999999] line-through">$2,699.00</span>
@@ -178,45 +178,45 @@ ob_start();
                     <h3 class="text-sm font-medium text-black mb-3">Metal</h3>
                     <div class="flex items-center gap-6">
                         <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="metal" value="yellow" class="hidden" checked>
+                            <input type="radio" name="metal" value="yellow" class="hidden" checked onchange="updateMetalBorderDetail(this)">
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center mb-1">
+                                <div id="yellow-border-detail" class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center mb-1">
                                     <div class="w-10 h-10 rounded-full bg-[#FFD700]"></div>
                                 </div>
                                 <span class="text-sm font-medium text-black">18K Yellow</span>
                             </div>
                         </label>
                         <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="metal" value="white" class="hidden">
+                            <input type="radio" name="metal" value="white" class="hidden" onchange="updateMetalBorderDetail(this)">
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div id="white-border-detail" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
                                     <div class="w-10 h-10 rounded-full bg-[#F5F5F5]"></div>
                                 </div>
                                 <span class="text-sm font-medium text-[#666666]">18K White</span>
                             </div>
                         </label>
                         <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="metal" value="rose" class="hidden">
+                            <input type="radio" name="metal" value="rose" class="hidden" onchange="updateMetalBorderDetail(this)">
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div id="rose-border-detail" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
                                     <div class="w-10 h-10 rounded-full bg-[#E0BFB8]"></div>
                                 </div>
                                 <span class="text-sm font-medium text-[#666666]">14K Rose</span>
                             </div>
                         </label>
                         <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="metal" value="platinum" class="hidden">
+                            <input type="radio" name="metal" value="platinum" class="hidden" onchange="updateMetalBorderDetail(this)">
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div id="platinum-border-detail" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
                                     <div class="w-10 h-10 rounded-full bg-[#E5E4E2]"></div>
                                 </div>
                                 <span class="text-sm font-medium text-[#666666]">Platinum</span>
                             </div>
                         </label>
                         <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="metal" value="platinum2" class="hidden">
+                            <input type="radio" name="metal" value="platinum2" class="hidden" onchange="updateMetalBorderDetail(this)">
                             <div class="flex flex-col items-center">
-                                <div class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
+                                <div id="platinum2-border-detail" class="w-12 h-12 rounded-full border-2 border-[#E8E8E8] flex items-center justify-center mb-1">
                                     <div class="w-10 h-10 rounded-full bg-[#C0C0C0]"></div>
                                 </div>
                                 <span class="text-sm font-medium text-[#666666]">Platinum</span>
@@ -229,29 +229,23 @@ ob_start();
                 <div class="mb-6">
                     <h3 class="text-sm font-medium text-black mb-3">Shape</h3>
                     <div class="flex items-center gap-3">
-                        <button class="flex flex-col items-center gap-2 p-3 border-2 border-black rounded-lg hover:bg-gray-50 transition-colors">
+                        <button class="shape-btn-detail flex flex-col items-center gap-2 p-3 border-2 border-black rounded-lg hover:bg-gray-50 transition-colors" onclick="selectShapeDetail(this)" data-shape="round">
                             <img src="/assets/images/shapes/round.png" alt="Round" class="w-10 h-10 object-contain">
-                            <span class="text-xs text-black font-medium">Round</span>
                         </button>
-                        <button class="flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:border-black transition-colors">
+                        <button class="shape-btn-detail flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:bg-gray-50 transition-colors" onclick="selectShapeDetail(this)" data-shape="oval">
                             <img src="/assets/images/shapes/oval.png" alt="Oval" class="w-10 h-10 object-contain">
-                            <span class="text-xs text-[#666666] font-medium">Oval</span>
                         </button>
-                        <button class="flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:border-black transition-colors">
+                        <button class="shape-btn-detail flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:bg-gray-50 transition-colors" onclick="selectShapeDetail(this)" data-shape="cushion">
                             <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="w-10 h-10 object-contain">
-                            <span class="text-xs text-[#666666] font-medium">Cushion</span>
                         </button>
-                        <button class="flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:border-black transition-colors">
+                        <button class="shape-btn-detail flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:bg-gray-50 transition-colors" onclick="selectShapeDetail(this)" data-shape="emerald">
                             <img src="/assets/images/shapes/emerald.png" alt="Emerald" class="w-10 h-10 object-contain">
-                            <span class="text-xs text-[#666666] font-medium">Emerald</span>
                         </button>
-                        <button class="flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:border-black transition-colors">
+                        <button class="shape-btn-detail flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:bg-gray-50 transition-colors" onclick="selectShapeDetail(this)" data-shape="princess">
                             <img src="/assets/images/shapes/princess.png" alt="Princess" class="w-10 h-10 object-contain">
-                            <span class="text-xs text-[#666666] font-medium">Princess</span>
                         </button>
-                        <button class="flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:border-black transition-colors">
+                        <button class="shape-btn-detail flex flex-col items-center gap-2 p-3 border-2 border-[#E5E5E5] rounded-lg hover:bg-gray-50 transition-colors" onclick="selectShapeDetail(this)" data-shape="radiant">
                             <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="w-10 h-10 object-contain">
-                            <span class="text-xs text-[#666666] font-medium">Radiant</span>
                         </button>
                     </div>
                 </div>
@@ -425,6 +419,34 @@ ob_start();
         font-weight: bold;
     }
 </style>
+
+<script>
+function selectShapeDetail(element) {
+    document.querySelectorAll('.shape-btn-detail').forEach(btn => {
+        btn.classList.remove('border-black');
+        btn.classList.add('border-[#E5E5E5]');
+    });
+    
+    element.classList.remove('border-[#E5E5E5]');
+    element.classList.add('border-black');
+}
+
+function updateMetalBorderDetail(input) {
+    document.querySelectorAll('input[name="metal"]').forEach(radio => {
+        const value = radio.value;
+        const border = document.getElementById(value + '-border-detail');
+        if (border) {
+            if (radio.checked) {
+                border.classList.remove('border-[#E8E8E8]');
+                border.classList.add('border-black');
+            } else {
+                border.classList.remove('border-black');
+                border.classList.add('border-[#E8E8E8]');
+            }
+        }
+    });
+}
+</script>
 
 <?php
 $content = ob_get_clean();
