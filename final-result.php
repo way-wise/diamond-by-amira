@@ -397,12 +397,12 @@ ob_start();
                         <div>
                             <h3 class="text-base font-semibold text-black mb-4">Certificate</h3>
                             <div class="flex gap-3">
-                                <label class="flex items-center gap-2 px-6 py-2.5 border-2 border-black rounded-lg cursor-pointer">
-                                    <input type="checkbox" class="w-4 h-4" checked>
+                                <label class="certificate-option flex items-center justify-center px-6 py-2.5 border-2 border-black rounded-lg cursor-pointer transition-colors">
+                                    <input type="checkbox" class="hidden certificate-checkbox" checked>
                                     <span class="text-sm font-medium">GIA</span>
                                 </label>
-                                <label class="flex items-center gap-2 px-6 py-2.5 border-2 border-[#E8E8E8] rounded-lg cursor-pointer">
-                                    <input type="checkbox" class="w-4 h-4">
+                                <label class="certificate-option flex items-center justify-center px-6 py-2.5 border-2 border-[#E8E8E8] rounded-lg cursor-pointer transition-colors">
+                                    <input type="checkbox" class="hidden certificate-checkbox">
                                     <span class="text-sm font-medium">IGI</span>
                                 </label>
                             </div>
@@ -1287,6 +1287,28 @@ document.addEventListener('DOMContentLoaded', function() {
         
         updateSymmetrySlider();
     }
+
+    // Certificate checkbox toggle functionality
+    const certificateOptions = document.querySelectorAll('.certificate-option');
+    
+    certificateOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const checkbox = this.querySelector('.certificate-checkbox');
+            
+            // Toggle checkbox state
+            checkbox.checked = !checkbox.checked;
+            
+            // Update border based on checkbox state
+            if (checkbox.checked) {
+                this.classList.remove('border-[#E8E8E8]');
+                this.classList.add('border-black');
+            } else {
+                this.classList.remove('border-black');
+                this.classList.add('border-[#E8E8E8]');
+            }
+        });
+    });
 });
 </script>
 
