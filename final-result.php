@@ -211,12 +211,12 @@ ob_start();
 <!-- Progress Steps - Selected Items -->
 <section class="pt-8 md:pt-12">
     <div class="container-wrapper">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 border border-[#D7D7D7] rounded-2xl">
             <!-- Step 1: Choose Your Diamond -->
-            <div class="bg-white border border-[#E5E5E5] rounded-lg p-4 flex items-center gap-3">
+            <div class="p-4 flex items-center gap-3">
                 <div class="relative">
-                    <img src="/assets/images/small-diamond.png" alt="Diamond" class="w-12 h-12 object-contain">
-                    <svg class="absolute -top-1 -right-1 w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <img src="/assets/images/small-ring.png" alt="Diamond" class="w-12 h-12 object-contain">
+                    <svg class="absolute -top-1 -right-1 size-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="10" cy="10" r="10" fill="#16A34A"/>
                         <path d="M6 10L8.5 12.5L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -228,10 +228,10 @@ ob_start();
             </div>
 
             <!-- Step 2: Choose Your Setting -->
-            <div class="bg-white border border-[#E5E5E5] rounded-lg p-4 flex items-center gap-3">
+            <div class="p-4 flex items-center gap-3">
                 <div class="relative">
-                    <img src="/assets/images/small-ring.png" alt="Ring" class="w-12 h-12 object-contain">
-                    <svg class="absolute -top-1 -right-1 w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <img src="/assets/images/small-diamond.png" alt="Ring" class="w-12 h-12 object-contain">
+                    <svg class="absolute -top-1 -right-1 size-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="10" cy="10" r="10" fill="#16A34A"/>
                         <path d="M6 10L8.5 12.5L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -243,11 +243,12 @@ ob_start();
             </div>
 
             <!-- Step 3: Complete -->
-            <div class="bg-white border border-[#E5E5E5] rounded-lg p-4 flex items-center gap-3">
-                <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#666666" stroke-width="1.5"/>
-                        <path d="M12 6V12L16 14" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+            <div class="bg-[#F7F5F5] rounded-lg p-4 flex items-center gap-3">
+                <div class="relative">
+                    <img src="/assets/images/complete-ring.png" alt="Ring" class="w-12 h-12 object-contain">
+                    <svg class="absolute -top-1 -right-1 size-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#16A34A"/>
+                        <path d="M6 10L8.5 12.5L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
                 <div class="flex-1">
