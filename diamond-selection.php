@@ -170,47 +170,55 @@ ob_start();
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="round">
-                            <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/round.png" alt="Round" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Round</h2>
                         </div>
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="oval">
-                            <img src="/assets/images/shapes/oval.png" alt="Oval" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/oval.png" alt="Oval" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Oval</h2>
                         </div>
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="cushion">
-                            <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Cushion</h2>
                         </div>
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="emerald">
-                            <img src="/assets/images/shapes/emerald.png" alt="Emerald" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/emerald.png" alt="Emerald" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Emerald</h2>
                         </div>
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="princess">
-                            <img src="/assets/images/shapes/princess.png" alt="Princess" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/princess.png" alt="Princess" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Princess</h2>
                         </div>
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="radiant">
-                            <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Radiant</h2>
                         </div>
                     </div>
                     <!-- More Shapes Section (Hidden by default) -->
                     <div id="diamond-more-shapes" class="hidden mt-4 grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="pear">
-                            <img src="/assets/images/shapes/pear.png" alt="Pear" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/pear.png" alt="Pear" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Pear</h2>
                         </div>
-                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="marquise">
-                            <img src="/assets/images/shapes/marquise.png" alt="Marquise" class="size-16 object-cover">
-                            <h2 class="text-sm">Marquise</h2>
-                        </div>
                         <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="heart">
-                            <img src="/assets/images/shapes/heart.png" alt="Heart" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/heart.png" alt="Heart" class="h-14 object-cover">
+                            </div>
                             <h2 class="text-sm">Heart</h2>
-                        </div>
-                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="asscher">
-                            <img src="/assets/images/shapes/asscher.png" alt="Asscher" class="size-16 object-cover">
-                            <h2 class="text-sm">Asscher</h2>
                         </div>
                     </div>
                 </div>

@@ -167,29 +167,55 @@ ob_start();
                         </button>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
-                        <div class="flex flex-col items-center gap-2 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="round" onclick="selectShape(this)">
-                            <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
-                            <h2>Round</h2>
+                        <div class="flex flex-col items-center gap-3 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="round" onclick="selectShape(this)">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/emerald.png" alt="Emarald" class="h-14 object-cover">
+                            </div>
+                            <h2>Emerald</h2>
                         </div>
                         <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="round-2" onclick="selectShape(this)">
-                            <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/round.png" alt="Round" class="h-14 object-cover">
+                            </div>
                             <h2>Round</h2>
                         </div>
                         <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="oval" onclick="selectShape(this)">
-                            <img src="/assets/images/shapes/oval.png" alt="Oval" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/oval.png" alt="Oval" class="h-14 object-cover">
+                            </div>
                             <h2>Oval</h2>
                         </div>
                         <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="cushion" onclick="selectShape(this)">
-                            <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="h-14 object-cover">
+                            </div>
                             <h2>Cushion</h2>
                         </div>
                         <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="princess" onclick="selectShape(this)">
-                            <img src="/assets/images/shapes/princess.png" alt="Princess" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/princess.png" alt="Princess" class="h-14 object-cover">
+                            </div>
                             <h2>Princess</h2>
                         </div>
                         <div class="flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition shape-option" data-shape="radiant" onclick="selectShape(this)">
-                            <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="size-16 object-cover">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="h-14 object-cover">
+                            </div>
                             <h2>Radiant</h2>
+                        </div>
+                    </div>
+                    <div id="settings-more-shapes" class="hidden mt-4 grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
+                        <div class="shape-option flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShape(this)" data-shape="pear">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/pear.png" alt="Pear" class="h-14 object-cover">
+                            </div>
+                            <h2>Pear</h2>
+                        </div>
+                        <div class="shape-option flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShape(this)" data-shape="heart">
+                            <div class="size-16 flex items-center justify-center">
+                                <img src="/assets/images/shapes/heart.png" alt="Heart" class="h-14 object-cover">
+                            </div>
+                            <h2>Heart</h2>
                         </div>
                     </div>
                 </div>
