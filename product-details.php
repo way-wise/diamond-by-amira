@@ -8,55 +8,62 @@ ob_start();
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Product Detail Section -->
-<section class="py-8 md:py-12">
+
+<!-- Progress Steps - Selected Items -->
+<section class="pt-8 md:pt-12">
     <div class="container-wrapper">
-        <!-- Progress Indicators -->
-        <div class="flex items-center justify-center gap-4 md:gap-8 mb-8 overflow-x-auto pb-4">
-            <div class="flex items-center gap-2 min-w-max">
-                <div class="w-8 h-8 rounded-full bg-[#F7F5F5] flex items-center justify-center">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 2L12.5 7.5L18 9L14 13L15 18.5L10 16L5 18.5L6 13L2 9L7.5 7.5L10 2Z" stroke="currentColor" stroke-width="1.5"/>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 border border-[#D7D7D7] rounded-2xl">
+            <!-- Step 1: Choose Your Diamond -->
+            <div class="p-4 flex items-center gap-3">
+                <div class="relative">
+                    <img src="/assets/images/small-ring.png" alt="Diamond" class="w-12 h-12 object-contain">
+                    <svg class="absolute -top-1 -right-1 size-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#16A34A"/>
+                        <path d="M6 10L8.5 12.5L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="text-xs md:text-sm">
-                    <div class="text-[#666666]">The Bezel Set Solitaire</div>
-                    <div class="font-bold text-black">$542.00 CAD</div>
+                <div class="flex-1">
+                    <p class="text-xs text-[#666666]">Choose Your Diamond</p>
+                    <p class="text-sm font-bold text-black">$523.00 CAD</p>
                 </div>
             </div>
 
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
-            <div class="flex items-center gap-2 min-w-max">
-                <div class="w-8 h-8 rounded-full bg-[#00B67A] text-white flex items-center justify-center">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.3334 4L6.00002 11.3333L2.66669 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Step 2: Choose Your Setting -->
+            <div class="p-4 flex items-center gap-3">
+                <div class="relative">
+                    <img src="/assets/images/small-diamond.png" alt="Ring" class="w-12 h-12 object-contain">
+                    <svg class="absolute -top-1 -right-1 size-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#16A34A"/>
+                        <path d="M6 10L8.5 12.5L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="text-xs md:text-sm">
-                    <div class="text-[#666666]">0.50ct diamond - Oval</div>
-                    <div class="font-bold text-black">$42.00 CAD</div>
+                <div class="flex-1">
+                    <p class="text-xs text-[#666666]">Choose Your Setting</p>
+                    <p class="text-sm font-bold text-black">$42.00 CAD</p>
                 </div>
             </div>
 
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
-            <div class="flex items-center gap-2 min-w-max">
-                <div class="w-8 h-8 rounded-full bg-[#F7F5F5] flex items-center justify-center">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+            <!-- Step 3: Complete -->
+            <div class="bg-[#F7F5F5] rounded-lg p-4 flex items-center gap-3">
+                <div class="relative">
+                    <img src="/assets/images/complete-ring.png" alt="Ring" class="w-12 h-12 object-contain">
+                    <svg class="absolute -top-1 -right-1 size-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#16A34A"/>
+                        <path d="M6 10L8.5 12.5L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="text-xs md:text-sm">
-                    <div class="text-[#666666]">Complete ring</div>
-                    <div class="font-bold text-black">$42.00 CAD</div>
+                <div class="flex-1">
+                    <p class="text-xs text-[#666666]">Complete</p>
+                    <p class="text-sm font-bold text-black">$65.00 CAD</p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Product Detail Section -->
+<section class="py-8 md:py-12">
+    <div class="container-wrapper">
 
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
             <!-- Product Images -->
