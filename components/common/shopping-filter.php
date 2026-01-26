@@ -73,37 +73,58 @@
         <div class="lg:col-span-7">
             <div class="flex items-center justify-between mb-5">
                 <h2 class="text-xl font-bold text-[#000000]">Shape</h2>
-                <button class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2">
+                <button onclick="toggleMoreShapes('tab1')" class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-50 transition">
                     <span class="mr-2">More Shapes</span>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="tab1-more-icon" class="transition-transform" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#737373" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
             <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="round">
                     <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
-                    <h2>Round</h2>
+                    <h2 class="text-sm">Round</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="round-2">
                     <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
-                    <h2>Round</h2>
+                    <h2 class="text-sm">Round</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/oval.png" alt="Round" class="size-16 object-cover">
-                    <h2>Oval</h2>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="oval">
+                    <img src="/assets/images/shapes/oval.png" alt="Oval" class="size-16 object-cover">
+                    <h2 class="text-sm">Oval</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/cushion.png" alt="Round" class="size-16 object-cover">
-                    <h2>Cushion</h2>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="cushion">
+                    <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="size-16 object-cover">
+                    <h2 class="text-sm">Cushion</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/princess.png" alt="Round" class="size-16 object-cover">
-                    <h2>Princess</h2>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="princess">
+                    <img src="/assets/images/shapes/princess.png" alt="Princess" class="size-16 object-cover">
+                    <h2 class="text-sm">Princess</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
-                    <img src="/assets/images/shapes/radiant.png" alt="Round" class="size-16 object-cover">
-                    <h2>Radiant</h2>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="radiant">
+                    <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="size-16 object-cover">
+                    <h2 class="text-sm">Radiant</h2>
+                </div>
+            </div>
+            <!-- More Shapes Section (Hidden by default) -->
+            <div id="tab1-more-shapes" class="hidden mt-4 grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="pear">
+                    <img src="/assets/images/shapes/pear.png" alt="Pear" class="size-16 object-cover">
+                    <h2 class="text-sm">Pear</h2>
+                </div>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="marquise">
+                    <img src="/assets/images/shapes/marquise.png" alt="Marquise" class="size-16 object-cover">
+                    <h2 class="text-sm">Marquise</h2>
+                </div>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="heart">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-16" width="36" height="36" fill="none" viewBox="0 0 85 80">
+                        <path fill="#020202" stroke="#020202" stroke-width="0.5" d="M2.832 35.463a53.4 53.4 0 0 0 3.663 10.426c3.374 7.626 8.483 14.287 15.23 20.175C27.414 70.988 34.259 75.332 42.164 79h.289c.096 0 .193 0 .289-.097 24.582-11.198 38.367-28.574 40.97-51.356.193-1.738.289-3.186.289-4.44 0-.87-.096-1.835-.193-2.703C82.94 13.55 78.987 7.66 73.3 4.186h-.097A22 22 0 0 0 61.732 1c-7.809 0-17.545 5.985-19.28 7.144C40.717 6.985 30.98 1 23.172 1A22 22 0 0 0 11.7 4.186s-.096 0-.096.096A22.1 22.1 0 0 0 1 23.203c0 1.255.096 2.703.29 4.44.385 2.607.867 5.31 1.542 7.82Zm1.06.29 8.869-2.22-5.784 11.1c-1.35-2.895-2.314-5.791-3.085-8.88Zm16.484-10.426-6.748 6.757-10.99-11.39 17.738-6.565zm.193 1.158 2.024 12.357-8.193-6.179zm-6.748 7.047 8.965 6.661-2.217 8.881-12.917-3.668zm9.64 7.53 8.194 10.233-10.218-2.028zM7.748 46.468l12.146 3.378-6.266 6.179c-2.217-2.993-4.241-6.178-5.88-9.557Zm6.555 10.426 6.17-6.179 1.06 13.805c-2.7-2.414-5.11-4.923-7.23-7.626Zm7.037-6.661 11.086 2.22 2.217 11.198-12.146 1.448zm12.243 2.992 8.098 6.082-6.074 4.054zm-10.411 12.84 11.471-1.352-2.024 8.109c-3.374-2.124-6.555-4.344-9.447-6.758Zm10.315 7.24 1.928-7.82 5.976 12.067c-2.699-1.352-5.398-2.703-7.904-4.248Zm9.061 4.247-6.555-13.225 6.652-4.44 6.651 4.44zm.868-18.245 8.097-6.082-2.024 10.136zm.096 18.341 6.073-12.163 2.121 7.723c-2.506 1.544-5.302 2.993-8.194 4.44Zm9.062-4.923-2.217-8.012 11.375 1.448c-2.7 2.317-5.784 4.44-9.158 6.564Zm-2.217-8.977 2.217-11.198 11.086-2.22-1.253 14.962zm2.988-12.453 8.194-10.233 2.024 8.205zm10.122 13.321 1.157-13.9 6.17 6.178c-2.121 2.703-4.531 5.309-7.327 7.722Zm7.905-8.495-6.266-6.178 12.242-3.475c-1.638 3.378-3.566 6.564-5.976 9.653Zm-6.748-7.047-2.217-8.88 8.965-6.662 6.17 11.97zm-.097-22.589 6.17 6.178-8.194 6.179zm-.77-1.64-11.858-3.959 11.857-6.66zm.963.482V14.129l17.738 6.564-10.99 11.391zm13.4 19.403-5.784-11.198 8.868 2.22c-.77 3.09-1.735 6.082-3.084 8.978Zm4.916-21.624q0 1.738-.29 4.345c-.288 2.51-.674 4.923-1.252 7.336l-9.062-2.317 10.604-10.908zm-.29-3.378-17.64-6.468 8.097-8.109c5.013 3.186 8.58 8.495 9.544 14.577ZM61.829 1.868c3.856 0 7.423 1.063 10.508 2.8l-8.098 8.11-8.869-9.75c2.218-.677 4.435-1.16 6.46-1.16Zm1.639 11.488L50.646 20.5l-7.327-2.413L54.502 3.51zM43.03 8.916c.964-.58 5.206-3.282 10.122-5.116L43.03 16.832zm0 10.04 6.459 2.123-6.459 3.572zm-.675 6.95c.097 0 .097.097.193.097.097 0 .193 0 .193-.097l7.905-4.44 12.917 4.343-2.313 13.998-9.544 11.874-9.158 7.047-9.254-6.95-9.544-11.874-2.313-13.998 12.917-4.344zM21.34 24.844V14.225l11.857 6.565zm14.267-3.765 6.46-2.124v5.793zm6.46-12.163v7.916L31.751 3.703c5.012 1.834 9.35 4.537 10.314 5.213Zm-.29 9.17L34.451 20.5 21.63 13.356l8.772-9.846zM23.268 1.87c2.025 0 4.145.386 6.363 1.062l-8.773 9.75-8.097-8.11c3.085-1.64 6.651-2.702 10.507-2.702ZM11.893 5.15l8.098 8.109L2.35 19.728c.964-6.082 4.53-11.295 9.543-14.577Zm-9.736 16.41 10.604 10.91-9.062 2.316c-.578-2.413-.964-4.827-1.253-7.336-.29-1.738-.386-3.186-.386-4.345 0-.482 0-1.061.097-1.544Z"></path>
+                    </svg>
+                    <h2 class="text-sm">Heart</h2>
+                </div>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="asscher">
+                    <img src="/assets/images/shapes/asscher.png" alt="Asscher" class="size-16 object-cover">
+                    <h2 class="text-sm">Asscher</h2>
                 </div>
             </div>
         </div>
@@ -276,37 +297,58 @@
         <div class="lg:col-span-7">
             <div class="flex items-center justify-between mb-5">
                 <h2 class="text-xl font-bold text-[#000000]">Shape</h2>
-                <button class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2">
+                <button onclick="toggleMoreShapes('tab2')" class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-50 transition">
                     <span class="mr-2">More Shapes</span>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="tab2-more-icon" class="transition-transform" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#737373" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
             <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="round">
                     <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
-                    <h2>Round</h2>
+                    <h2 class="text-sm">Round</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="oval">
                     <img src="/assets/images/shapes/oval.png" alt="Oval" class="size-16 object-cover">
-                    <h2>Oval</h2>
+                    <h2 class="text-sm">Oval</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="cushion">
                     <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="size-16 object-cover">
-                    <h2>Cushion</h2>
+                    <h2 class="text-sm">Cushion</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="emerald">
                     <img src="/assets/images/shapes/emerald.png" alt="Emerald" class="size-16 object-cover">
-                    <h2>Emerald</h2>
+                    <h2 class="text-sm">Emerald</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="princess">
                     <img src="/assets/images/shapes/princess.png" alt="Princess" class="size-16 object-cover">
-                    <h2>Princess</h2>
+                    <h2 class="text-sm">Princess</h2>
                 </div>
-                <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="radiant">
                     <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="size-16 object-cover">
-                    <h2>Radiant</h2>
+                    <h2 class="text-sm">Radiant</h2>
+                </div>
+            </div>
+            <!-- More Shapes Section (Hidden by default) -->
+            <div id="tab2-more-shapes" class="hidden mt-4 grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="pear">
+                    <img src="/assets/images/shapes/pear.png" alt="Pear" class="size-16 object-cover">
+                    <h2 class="text-sm">Pear</h2>
+                </div>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="marquise">
+                    <img src="/assets/images/shapes/marquise.png" alt="Marquise" class="size-16 object-cover">
+                    <h2 class="text-sm">Marquise</h2>
+                </div>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="heart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 85 80">
+                        <path fill="#020202" stroke="#020202" stroke-width="0.5" d="M2.832 35.463a53.4 53.4 0 0 0 3.663 10.426c3.374 7.626 8.483 14.287 15.23 20.175C27.414 70.988 34.259 75.332 42.164 79h.289c.096 0 .193 0 .289-.097 24.582-11.198 38.367-28.574 40.97-51.356.193-1.738.289-3.186.289-4.44 0-.87-.096-1.835-.193-2.703C82.94 13.55 78.987 7.66 73.3 4.186h-.097A22 22 0 0 0 61.732 1c-7.809 0-17.545 5.985-19.28 7.144C40.717 6.985 30.98 1 23.172 1A22 22 0 0 0 11.7 4.186s-.096 0-.096.096A22.1 22.1 0 0 0 1 23.203c0 1.255.096 2.703.29 4.44.385 2.607.867 5.31 1.542 7.82Zm1.06.29 8.869-2.22-5.784 11.1c-1.35-2.895-2.314-5.791-3.085-8.88Zm16.484-10.426-6.748 6.757-10.99-11.39 17.738-6.565zm.193 1.158 2.024 12.357-8.193-6.179zm-6.748 7.047 8.965 6.661-2.217 8.881-12.917-3.668zm9.64 7.53 8.194 10.233-10.218-2.028zM7.748 46.468l12.146 3.378-6.266 6.179c-2.217-2.993-4.241-6.178-5.88-9.557Zm6.555 10.426 6.17-6.179 1.06 13.805c-2.7-2.414-5.11-4.923-7.23-7.626Zm7.037-6.661 11.086 2.22 2.217 11.198-12.146 1.448zm12.243 2.992 8.098 6.082-6.074 4.054zm-10.411 12.84 11.471-1.352-2.024 8.109c-3.374-2.124-6.555-4.344-9.447-6.758Zm10.315 7.24 1.928-7.82 5.976 12.067c-2.699-1.352-5.398-2.703-7.904-4.248Zm9.061 4.247-6.555-13.225 6.652-4.44 6.651 4.44zm.868-18.245 8.097-6.082-2.024 10.136zm.096 18.341 6.073-12.163 2.121 7.723c-2.506 1.544-5.302 2.993-8.194 4.44Zm9.062-4.923-2.217-8.012 11.375 1.448c-2.7 2.317-5.784 4.44-9.158 6.564Zm-2.217-8.977 2.217-11.198 11.086-2.22-1.253 14.962zm2.988-12.453 8.194-10.233 2.024 8.205zm10.122 13.321 1.157-13.9 6.17 6.178c-2.121 2.703-4.531 5.309-7.327 7.722Zm7.905-8.495-6.266-6.178 12.242-3.475c-1.638 3.378-3.566 6.564-5.976 9.653Zm-6.748-7.047-2.217-8.88 8.965-6.662 6.17 11.97zm-.097-22.589 6.17 6.178-8.194 6.179zm-.77-1.64-11.858-3.959 11.857-6.66zm.963.482V14.129l17.738 6.564-10.99 11.391zm13.4 19.403-5.784-11.198 8.868 2.22c-.77 3.09-1.735 6.082-3.084 8.978Zm4.916-21.624q0 1.738-.29 4.345c-.288 2.51-.674 4.923-1.252 7.336l-9.062-2.317 10.604-10.908zm-.29-3.378-17.64-6.468 8.097-8.109c5.013 3.186 8.58 8.495 9.544 14.577ZM61.829 1.868c3.856 0 7.423 1.063 10.508 2.8l-8.098 8.11-8.869-9.75c2.218-.677 4.435-1.16 6.46-1.16Zm1.639 11.488L50.646 20.5l-7.327-2.413L54.502 3.51zM43.03 8.916c.964-.58 5.206-3.282 10.122-5.116L43.03 16.832zm0 10.04 6.459 2.123-6.459 3.572zm-.675 6.95c.097 0 .097.097.193.097.097 0 .193 0 .193-.097l7.905-4.44 12.917 4.343-2.313 13.998-9.544 11.874-9.158 7.047-9.254-6.95-9.544-11.874-2.313-13.998 12.917-4.344zM21.34 24.844V14.225l11.857 6.565zm14.267-3.765 6.46-2.124v5.793zm6.46-12.163v7.916L31.751 3.703c5.012 1.834 9.35 4.537 10.314 5.213Zm-.29 9.17L34.451 20.5 21.63 13.356l8.772-9.846zM23.268 1.87c2.025 0 4.145.386 6.363 1.062l-8.773 9.75-8.097-8.11c3.085-1.64 6.651-2.702 10.507-2.702ZM11.893 5.15l8.098 8.109L2.35 19.728c.964-6.082 4.53-11.295 9.543-14.577Zm-9.736 16.41 10.604 10.91-9.062 2.316c-.578-2.413-.964-4.827-1.253-7.336-.29-1.738-.386-3.186-.386-4.345 0-.482 0-1.061.097-1.544Z"></path>
+                    </svg>
+                    <h2 class="text-sm">Heart</h2>
+                </div>
+                <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab2')" data-shape="asscher">
+                    <img src="/assets/images/shapes/asscher.png" alt="Asscher" class="size-16 object-cover">
+                    <h2 class="text-sm">Asscher</h2>
                 </div>
             </div>
         </div>

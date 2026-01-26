@@ -340,3 +340,43 @@ function updateStyleBorder(radio) {
         selectedStyle.classList.add('border-black');
     }
 }
+
+// Shape selection for filter component
+function selectShapeFilter(element, tabId) {
+    // Get all shape options within the same tab
+    const parentTab = document.getElementById(tabId);
+    if (!parentTab) return;
+    
+    const shapeOptions = parentTab.querySelectorAll('.shape-option-filter');
+    
+    // Reset all borders to gray
+    shapeOptions.forEach(option => {
+        option.classList.remove('border-black');
+        option.classList.add('border-[#D7D7D7]');
+    });
+    
+    // Set selected border to black
+    element.classList.remove('border-[#D7D7D7]');
+    element.classList.add('border-black');
+}
+
+// Toggle More Shapes section
+function toggleMoreShapes(tabId) {
+    const moreShapesSection = document.getElementById(tabId + '-more-shapes');
+    const moreIcon = document.getElementById(tabId + '-more-icon');
+    
+    if (!moreShapesSection) return;
+    
+    // Toggle visibility
+    if (moreShapesSection.classList.contains('hidden')) {
+        moreShapesSection.classList.remove('hidden');
+        if (moreIcon) {
+            moreIcon.classList.add('rotate-180');
+        }
+    } else {
+        moreShapesSection.classList.add('hidden');
+        if (moreIcon) {
+            moreIcon.classList.remove('rotate-180');
+        }
+    }
+}

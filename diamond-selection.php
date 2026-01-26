@@ -161,37 +161,56 @@ ob_start();
                 <div class="lg:col-span-7">
                     <div class="flex items-center justify-between mb-5">
                         <h2 class="text-xl font-bold text-[#000000]">Shape</h2>
-                        <button class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2">
+                        <button onclick="toggleMoreShapesDiamond()" class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-50 transition">
                             <span class="mr-2">More Shapes</span>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="diamond-more-icon" class="transition-transform" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#737373" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>
                     <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="round">
                             <img src="/assets/images/shapes/round.png" alt="Round" class="size-16 object-cover">
-                            <h2>Round</h2>
+                            <h2 class="text-sm">Round</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="oval">
                             <img src="/assets/images/shapes/oval.png" alt="Oval" class="size-16 object-cover">
-                            <h2>Oval</h2>
+                            <h2 class="text-sm">Oval</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="cushion">
                             <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="size-16 object-cover">
-                            <h2>Cushion</h2>
+                            <h2 class="text-sm">Cushion</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="emerald">
                             <img src="/assets/images/shapes/emerald.png" alt="Emerald" class="size-16 object-cover">
-                            <h2>Emerald</h2>
+                            <h2 class="text-sm">Emerald</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="princess">
                             <img src="/assets/images/shapes/princess.png" alt="Princess" class="size-16 object-cover">
-                            <h2>Princess</h2>
+                            <h2 class="text-sm">Princess</h2>
                         </div>
-                        <div class="flex flex-col items-center gap-2 p-4 border border-[#D7D7D7] rounded-md">
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="radiant">
                             <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="size-16 object-cover">
-                            <h2>Radiant</h2>
+                            <h2 class="text-sm">Radiant</h2>
+                        </div>
+                    </div>
+                    <!-- More Shapes Section (Hidden by default) -->
+                    <div id="diamond-more-shapes" class="hidden mt-4 grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="pear">
+                            <img src="/assets/images/shapes/pear.png" alt="Pear" class="size-16 object-cover">
+                            <h2 class="text-sm">Pear</h2>
+                        </div>
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="marquise">
+                            <img src="/assets/images/shapes/marquise.png" alt="Marquise" class="size-16 object-cover">
+                            <h2 class="text-sm">Marquise</h2>
+                        </div>
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="heart">
+                            <img src="/assets/images/shapes/heart.png" alt="Heart" class="size-16 object-cover">
+                            <h2 class="text-sm">Heart</h2>
+                        </div>
+                        <div class="shape-option-diamond flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeDiamond(this)" data-shape="asscher">
+                            <img src="/assets/images/shapes/asscher.png" alt="Asscher" class="size-16 object-cover">
+                            <h2 class="text-sm">Asscher</h2>
                         </div>
                     </div>
                 </div>
@@ -424,6 +443,37 @@ ob_start();
         </div>
     </div>
 </section>
+
+<script>
+function selectShapeDiamond(element) {
+    document.querySelectorAll('.shape-option-diamond').forEach(option => {
+        option.classList.remove('border-black');
+        option.classList.add('border-[#D7D7D7]');
+    });
+    
+    element.classList.remove('border-[#D7D7D7]');
+    element.classList.add('border-black');
+}
+
+function toggleMoreShapesDiamond() {
+    const moreShapesSection = document.getElementById('diamond-more-shapes');
+    const moreIcon = document.getElementById('diamond-more-icon');
+    
+    if (!moreShapesSection) return;
+    
+    if (moreShapesSection.classList.contains('hidden')) {
+        moreShapesSection.classList.remove('hidden');
+        if (moreIcon) {
+            moreIcon.classList.add('rotate-180');
+        }
+    } else {
+        moreShapesSection.classList.add('hidden');
+        if (moreIcon) {
+            moreIcon.classList.remove('rotate-180');
+        }
+    }
+}
+</script>
 
 <?php
 $content = ob_get_clean();

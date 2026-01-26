@@ -159,9 +159,9 @@ ob_start();
                 <div class="lg:col-span-7">
                     <div class="flex items-center justify-between mb-5">
                         <h2 class="text-xl font-bold text-[#000000]">Shape</h2>
-                        <button class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2">
+                        <button onclick="toggleMoreShapesPage('settings')" class="text-sm text-[#000000] bg-transparent inline-flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-50 transition">
                             <span class="mr-2">More Shapes</span>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="settings-more-icon" class="transition-transform" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#737373" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
@@ -461,6 +461,25 @@ function updateStyleBorder(input) {
             }
         }
     });
+}
+
+function toggleMoreShapesPage(pageId) {
+    const moreShapesSection = document.getElementById(pageId + '-more-shapes');
+    const moreIcon = document.getElementById(pageId + '-more-icon');
+    
+    if (!moreShapesSection) return;
+    
+    if (moreShapesSection.classList.contains('hidden')) {
+        moreShapesSection.classList.remove('hidden');
+        if (moreIcon) {
+            moreIcon.classList.add('rotate-180');
+        }
+    } else {
+        moreShapesSection.classList.add('hidden');
+        if (moreIcon) {
+            moreIcon.classList.remove('rotate-180');
+        }
+    }
 }
 </script>
 
