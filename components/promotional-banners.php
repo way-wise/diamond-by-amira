@@ -16,7 +16,7 @@
                             Clock Runs Out.
                         </p>
                     </div>
-                    <a href="#"
+                    <a href="/shop.php"
                         class="inline-block text-black border border-black px-6 py-3 rounded-full bg-transparent hover:bg-black hover:text-white text-sm font-semibold transition-colors w-fit">
                         Shop Now
                     </a>
@@ -38,7 +38,7 @@
                             Clock Runs Out.
                         </p>
                     </div>
-                    <a href="#"
+                    <a href="/shop.php"
                         class="inline-block text-white border border-white px-6 py-3 rounded-full bg-transparent hover:bg-white hover:text-black text-sm font-semibold transition-colors w-fit">
                         Explore Collection
                     </a>

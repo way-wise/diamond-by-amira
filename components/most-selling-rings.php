@@ -7,7 +7,7 @@
                 <h2 class="text-3xl font-bold text-black mb-2">Most Selling Rings Category</h2>
                 <p class="text-gray-600">creating storage books filled with preset paragraphs</p>
             </div>
-            <a href="#" class="inline-flex items-center gap-2 text-black hover:underline">
+            <a href="/shop.php" class="inline-flex items-center gap-2 text-black hover:underline">
                 <span>See All</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -4,10 +4,10 @@
             <div class="max-w-[560px] text-center">
                 <h2 class="text-2xl lg:text-[32px] font-bold text-[#FFFFFF] mb-5">Your Perfect Diamond Awaits</h2>
                 <p class="text-sm font-normal text-[#FFFFFF] mb-6">Whether you’re choosing a certified loose diamond or a timeless piece of jewellery, find exceptional brilliance, trusted quality, and craftsmanship made to last forever.</p>
-                <a href="#" class="inline-flex items-center gap-2.5 bg-blue-600 text-white px-6 py-2.5 rounded-full">
+                <a href="/shop.php" class="inline-flex items-center gap-2.5 bg-white text-black px-6 py-2.5 rounded-full">
                     <span>Explore the Collection</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 11.0009L10.8076 5.63687L12.2218 4.22266L20 12.0009L12.2218 19.779L10.8076 18.3648L16.1716 13.0009H4V11.0009H16.1716Z" fill="#091D3D" />
+                        <path d="M16.1716 11.0009L10.8076 5.63687L12.2218 4.22266L20 12.0009L12.2218 19.779L10.8076 18.3648L16.1716 13.0009H4V11.0009H16.1716Z" fill="black" />
                     </svg>
                 </a>
             </div>
