@@ -22,9 +22,9 @@
             </svg>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Your cart is empty</h3>
             <p class="text-gray-600 mb-4">Add some items to get started</p>
-            <button id="continue-shopping" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+            <a href="/shop.php" id="continue-shopping" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
                 Continue Shopping
-            </button>
+            </a>
         </div>
 
         <!-- Cart Items List (hidden by default) -->
