@@ -83,37 +83,37 @@
             <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-black rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="round">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/round.png" alt="Round" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/round.png" alt="Round" class="h-14 object-cover">
                     </div>
                     <h2 class="text-sm">Round</h2>
                 </div>
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="round-2">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/round.png" alt="Round" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/round.png" alt="Round" class="h-14 object-cover">
                     </div>
                     <h2 class="text-sm">Round</h2>
                 </div>
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="oval">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/oval.png" alt="Oval" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/oval.png" alt="Oval" class="h-14 object-cover">
                     </div>
                     <h2 class="text-sm">Oval</h2>
                 </div>
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="cushion">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/cushion.png" alt="Cushion" class="h-14 object-cover">
                     </div>
                     <h2 class="text-sm">Cushion</h2>
                 </div>
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="princess">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/princess.png" alt="Princess" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/princess.png" alt="Princess" class="h-14 object-cover">
                     </div>
                     <h2 class="text-sm">Princess</h2>
                 </div>
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="radiant">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/radiant.png" alt="Radiant" class="h-14 object-cover">
                     </div>
                     <h2 class="text-sm">Radiant</h2>
                 </div>
@@ -122,13 +122,13 @@
             <div id="tab1-more-shapes" class="hidden mt-4 grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-4 text-black">
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="pear">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/pear.png" alt="Pear" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/pear.png" alt="Pear" class="h-14 object-cover">
                     </div>  
                     <h2 class="text-sm">Pear</h2>
                 </div>
                 <div class="shape-option-filter flex flex-col items-center gap-2 p-4 border-2 border-[#D7D7D7] rounded-md cursor-pointer hover:bg-gray-50 transition" onclick="selectShapeFilter(this, 'tab1')" data-shape="marquise">
                     <div class="size-16 flex items-center justify-center">
-                        <img src="/assets/images/shapes/heart.png" alt="Pear" class="h-16 object-cover">
+                        <img src="/assets/images/shapes/heart.png" alt="Pear" class="h-14 object-cover">
                     </div>
                     <h2 class="text-sm">Heart</h2>
                 </div>
